@@ -45,14 +45,29 @@
   
     </style>
   </head>
+
 <body>
   <div class="topnav">
     <a href="https://15edwardz.github.io">Home</a>
-    <a class="active" href="#about-me">About Me</a>
-    <a href="#contact">Hire</a>
+    <a href="https://15edwardz.github.io/about-me.html">About Me</a>
+    <a class="active" href="#powerlifting">Powerlifting</a>
   </div>
-    <h1>Hello, I'm Edward!</h1>
-    <p>I love my mom!</p>
-    <p id="nbr">50</p>
+  <h1>GeeksforGeeks</h1>
+  <p>COUNTS</p>
+  <div id="counter">
+  </div>
+
+  <script>
+      let counts=setInterval(updated);
+      let upto=0;
+      function updated(){
+          var count= document.getElementById("counter");
+          count.innerHTML=++upto;
+          if(upto===1130)
+          {
+              clearInterval(counts);
+          }
+      }
+  </script>
 </body>
 </html>
