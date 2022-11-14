@@ -2,7 +2,7 @@
 <html lang="en">
   
 <head>
-  <title>Edward Zhang</title>
+  <title>Powerlifting</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Edward Zhang"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -42,6 +42,21 @@
         padding: 1px;
         padding-left: 15px;
       }
+    .numcount{
+      padding-left: 0px;
+      margin: 0px;
+      position: relative;
+      text-align: left;
+      background: #f5f6f6;
+      color: rgb(12, 12, 12);
+      font-size: 65px;  
+      display:block;
+      margin-right:10px;
+      float:left
+    }
+    .lbs{
+      Display: block;
+    }
   
     </style>
   </head>
@@ -52,10 +67,22 @@
     <a href="https://15edwardz.github.io/about-me.html">About Me</a>
     <a class="active" href="#powerlifting">Powerlifting</a>
   </div>
-  <h1>GeeksforGeeks</h1>
-  <p>COUNTS</p>
-  <div id="counter">
-  </div>
+  <header class="header">
+    <div class="container">    
+        <h1 class="name">Powerlifting</h1>
+        <h2>SBD Total</h2>
+        <div class = "numcount"; id = "counter">
+          <p>pounds</p>
+        </div>  
+        <div>&nbsp;</div>
+        <div id = "lbs"><h2>pounds</h2></div>       
+    </div>
+    <ul class="social" >         
+      <div><a href="https://www.instagram.com/ihavebigcalves"><i class="fa fa-instagram" style="font-size:36px; color:black"></i></a>
+      </div>                 
+    </ul> 
+
+  </header>
 
   <script>
       let counts=setInterval(updated);
@@ -63,7 +90,7 @@
       function updated(){
           var count= document.getElementById("counter");
           count.innerHTML=++upto;
-          if(upto===1130)
+          if(upto===1165)
           {
               clearInterval(counts);
           }
