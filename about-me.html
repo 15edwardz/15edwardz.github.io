@@ -8,8 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Edward Zhang"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-
+  
   <style>
+    html {
+      background-color: #f5f6f6
+    }
     body {
           margin: 0;
           font-family: Arial, Helvetica, sans-serif;
@@ -42,17 +45,33 @@
     .social{
         padding-left: 0px;
       }
-    .intro {
+
+    .introduction{
+      background: #f5f6f6;
+    }
+    .picIntro{
+      text-align:left;
+      float:left;
+    }
+
+    .intropic{
+      position:relative; left:8px;
+      text-align:left;
+      float:center;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .propic {
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+      }
+      .body1 {
         background-color: #9e9a9b;
         margin: 0px;
         padding: 1px;
         padding-left: 15px;
         font-family:Helvetica;
-      }
-    .propic {
-        border-radius: 100%;
-        width: 150px;
-        height: 150px;
+
       }
     .stangs{
         color: purple;
@@ -79,21 +98,35 @@
   <header class="header">
     <div class="container">    
         <h1 class="name">&nbspAbout Me</h1>
-        <img class = "propic" src="https://github.com/15edwardz/15edwardz.github.io/blob/master/Images/ProfilePicHtml.jpg?raw=true" alt="Profile Pic"/>
       </div>
   </header>
-  <div class="intro">
-    <b style = font-size:25px><br> Education</b>
-    <p>I am a first year computer science student at Western University. <span class=stangs>Go Mustangs!</span></p>
-  </div>   
-
-  <div class="section-inner">
-    <h2 class="heading">Contact Me</h2>
-    <div class="content">
-          &nbsp<i class="fa fa-map-marker" style="font-size:24px"> <span class=contact>Oakville, ON</span></i>
-          <br>
-          <i class="fa fa-envelope-o" style="font-size:24px"></i><a href="mailto:15edwardz@gmail.com">15edwardz@gmail.com</a>
+  <section class="introduction">
+    <div class="picIntro">
+      <img class = "propic" src="https://github.com/15edwardz/15edwardz.github.io/blob/master/Images/ProfilePicHtml.jpg?raw=true" alt="Profile Pic"/>
     </div>
-  </div> 
+    
+    <div class="intropic">
+      <p>Let me introduce myself. <br>
+        My full name is Edward Zhang and I am <br>
+        a computer science student pursuing a <br>
+        bachelor's degree in computer science<br>
+        at <span class=stangs>Western University</span>.
+        
+      </p>
+    </div>
+  </section>
+  <section class="body1">
+    <div class="section-inner">
+      <h2 class="heading">Contact Me</h2>
+      <div class="content">
+            &nbsp<i class="fa fa-map-marker" style="font-size:24px"> <span class=contact>Oakville, ON</span></i>
+            <br>
+            <i class="fa fa-envelope-o" style="font-size:24px"></i><a href="mailto:15edwardz@gmail.com">15edwardz@gmail.com</a>
+            <p></p>
+      </div>
+    </div> 
+  </section>
+
+ 
 </body>
 </html>
