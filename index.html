@@ -38,10 +38,34 @@
       padding-left: 0px;
     }
     .intro {
+      font-family: 'Times New Roman', Times, serif;
       background-color: #9e9a9b;
       margin: 0px;
       padding: 1px;
       padding-left: 15px;
+      padding-top: 15px;
+    }
+    .button {
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+    .button1 {
+      background-color: #9e9a9b; 
+      color: black; 
+      border: 2px solid #4CAF50;
+    }
+
+    .button1:hover {
+      background-color: #4CAF50;
+      color: white;
     }
 
   </style>
@@ -68,12 +92,13 @@
   </header>
 
   <div class="intro">
-    <p style = "color:blue;"> This.</p>
-    <img src="https://raw.githubusercontent.com/15edwardz/15edwardz.github.io/master/Images/Screen%20Shot%202022-07-01%20at%2011.20.42%20PM.png" alt="MineCraft"
-        width="400" height="200"/>   
-    <p>Hello there <br> 
-    I am Edward <br>
-    Currently working on this website.</p>
+    <b style="font-family: Arial, Helvetica, sans-serif;"> Welcome, I'm glad you're here!</b>
+    <p>Thanks for visiting my website, this is a personal project that I have been working on. I built this website using HTML, CSS and JavaScript.<br>
+    If you would like to know more about me, <br>
+    <button class="button button1" onclick="window.location.href='https://15edwardz.github.io/about-me.html'">Click Here</button>
+
+    </p>
+
     </div>              
 </body>
 </html>
