@@ -20,7 +20,7 @@
   
     .topnav {
         overflow: hidden;
-        background-color: rgb(86, 78, 78);
+        background-color: rgb(42, 39, 39);
       }
     .topnav a {
         float: left;
@@ -31,7 +31,7 @@
         font-size: 17px;
       }
     .header {
-        padding: 15px;
+        padding-left: 10px;
         margin: 0px;
         position: relative;
         text-align: left;
@@ -52,18 +52,21 @@
     .picIntro{
       text-align:left;
       float:left;
+      padding-left: 10px;
     }
 
     .intropic{
       position:relative; left:8px;
+      padding-right: 10px;
       text-align:left;
       float:center;
       font-family: 'Times New Roman', Times, serif;
     }
     .propic {
         border-radius: 100%;
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
+        ;
       }
       .body1 {
         background-color: #9e9a9b;
@@ -91,7 +94,7 @@
 <body>
   <div class="topnav">
     <a href="https://15edwardz.github.io">Home</a>
-    <a class="active" href="#about-me">About Me</a>
+    <a class="active" href="#about-me" style="color:orange">About Me</a>
     <a href="https://15edwardz.github.io/hire-me.html">Hire Me</a>
     <a href="https://15edwardz.github.io/powerlifting.html">Powerlifting</a>
   </div>
@@ -100,21 +103,23 @@
         <h1 class="name">&nbspAbout Me</h1>
       </div>
   </header>
+
+  <p style="padding-left:10px;font-family: 'Times New Roman', Times, serif;">Let me introduce myself. </p>
   <section class="introduction">
     <div class="picIntro">
       <img class = "propic" src="https://github.com/15edwardz/15edwardz.github.io/blob/master/Images/ProfilePicHtml.jpg?raw=true" alt="Profile Pic"/>
     </div>
-    
+
     <div class="intropic">
-      <p>Let me introduce myself. <br>
+      <p>
         My full name is Edward Zhang and I am <br>
-        a computer science student pursuing a <br>
-        bachelor's degree in computer science<br>
-        at <span class=stangs>Western University</span>.
-        
+        a computer science student and powerlifter.<br>
+        I am currently pursuing a bachelor's degree <br>
+        in computer science at <span class=stangs>Western University</span>.<br>
       </p>
     </div>
   </section>
+  
   <section class="body1">
     <div class="section-inner">
       <h2 class="heading">Contact Me</h2>
