@@ -15,7 +15,7 @@
 
     .topnav {
       overflow: hidden;
-      background-color: rgb(42, 39, 39);
+      background-color: rgb(86, 78, 78);
     }
     .topnav a {
       float: left;
@@ -39,6 +39,28 @@
       margin: 0px;
       padding: 1px;
       padding-left: 15px;
+    }
+    .button {
+      border: none;
+      color: white;
+      padding: 8px 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: 'Times New Roman', Times, serif;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+    .button1 {
+      background-color: #9e9a9b; 
+      color: black; 
+      border: 2px solid #c5d7c6;
+    }
+    .button1:hover {
+      background-color: #c9d1c9;
+      color: black;
     }
     .skills{
         padding-top: 15px;
@@ -65,7 +87,7 @@
   <div class="topnav">
     <a href="https://15edwardz.github.io">Home</a>
     <a href="https://15edwardz.github.io/about-me.html">About Me</a>
-    <a class="active" href="#hire-me" style="color:orange">Hire Me</a>
+    <a class="active" href="#hire-me">Hire Me</a>
     <a href="https://15edwardz.github.io/powerlifting.html">Powerlifting</a>
   </div>
 
@@ -77,10 +99,9 @@
   </header>
 
   <div class="intro">
-    <p> </p>
-    <img src="https://media.tenor.com/_uw0AVfF46UAAAAM/funny-man.gif" alt="Word Gif"
-        width="200" height="200"/>   
-    <p>I beg </p>
+    <p style="font-family:'Times New Roman', Times, serif">I am currently open and actively looking for opportunities in the </p>
+    <button class="button button1" onclick="window.location.href='https://docs.google.com/document/d/1vQsQLXunok11AbZMpBg3un3YkmZJy2xEvi9dKzlYifk/edit?usp=sharing'">View Resume</button>
+    <button class="button button1" onclick="window.location.href='#contactEdward'">Contact Me</button>
   </div>   
   <div class="skills">
         <b style="font-size:20px;">Programming languages:</b>
