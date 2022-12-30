@@ -57,9 +57,16 @@
     }
     .lbs{
       Display: block;
+      padding-left: 13px;
     }
     .righttxt { 
       text-align: right; 
+    }
+    .blog{
+      font-family: Arial, Helvetica, sans-serif;
+      padding-top: 10px; 
+      padding-bottom: 20px; 
+      padding-left: 13px;
     }
   
     </style>
@@ -80,22 +87,30 @@
           <p>pounds</p>
         </div>  
         <div>&nbsp;</div>
-        <div id = "lbs"><h2>pounds</h2></div>       
+        <div id = "lbs"><h2>pounds</h2></div>    
+        <b style="font-family: Arial, Helvetica, sans-serif; font-size:18px; padding-left: 5px;">435/315/465</b>   
     </div>
+    <!---
     <ul class="social" >         
       <div><a href="https://www.instagram.com/ihavebigcalves" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" style="font-size:36px; color:black"></i></a>
       </div>                 
     </ul> 
+    -->
 
   </header>
 
-
+  <!--
+  <div class="blog">
+    <b style="font-size: 26px;">Entries</b>
+  </div>
+  -->
   <script>
       let counts=setInterval(updated);
       let upto=0;
       function updated(){
           var count= document.getElementById("counter");
           count.innerHTML=++upto;
+
           if(upto===1215)
           {
               clearInterval(counts);
