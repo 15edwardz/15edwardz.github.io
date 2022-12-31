@@ -4,6 +4,7 @@
 <head>
   <title>Powerlifting</title>
   <link rel="shortcut icon" type="image/png" href="https://github.com/15edwardz/15edwardz.github.io/blob/master/Images/favicon-16x16.png?raw=true">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Edward Zhang"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -68,7 +69,19 @@
       padding-bottom: 20px; 
       padding-left: 13px;
     }
-  
+    .converter{
+      padding: 13px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    input[type=num] {
+      padding: 10px;
+      margin:10px 0;
+      
+    }   
+    .rounded-input {
+      padding:10px;
+      border-radius:10px;
+    }
     </style>
   </head>
 
@@ -99,11 +112,21 @@
 
   </header>
 
+  <div class = "converter">
+    <b style="padding-left: 3px;">Convert your total </b>
+    <br>
+    <input id="inputOne" type="num" placeholder="Enter your total"/>
+    <button id="myBtn" onclick="javascript:alert('Hello World!')">Calculate</button>
+  
+
+  </div>
   <!--
   <div class="blog">
     <b style="font-size: 26px;">Entries</b>
   </div>
   -->
+
+
   <script>
       let counts=setInterval(updated);
       let upto=0;
@@ -117,6 +140,19 @@
           }
       }
   </script>
+
+<script>
+  function calculate(){
+    var input = document.getElementById("myInput");
+    input.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+      event.preventDefault();
+      document.getElementById("myBtn").click();
+      }
+    }
+  }
+
+</script>
   
 </body>
 </html>
