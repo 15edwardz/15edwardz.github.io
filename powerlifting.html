@@ -86,7 +86,7 @@
     <script>
       function convertlbs() {
         total = document.getElementById("inputOne").value;   
-        document.getElementById("result").innerHTML = total*2.205; 
+        document.getElementById("result").innerHTML = total/2.205; 
           
       }
       </script>
@@ -126,6 +126,7 @@
     <br>
     <input id="inputOne" type="num" placeholder="Enter your total"/>
     <input type="button" onClick="convertlbs()" Value="Convert" />
+    <br>
     <span id = "result"></span>
 
   
