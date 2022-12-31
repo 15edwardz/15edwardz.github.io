@@ -145,8 +145,9 @@
 
   <script>
     function convertlbs() {
-      total = document.getElementById("inputOne").value;   
-      document.getElementById("result").innerHTML = total/2.205; 
+      total = document.getElementById("inputOne").value;  
+      converted = total/2.205 
+      document.getElementById("result").innerHTML = converted.toFixed(2); 
       
     }
   </script>
