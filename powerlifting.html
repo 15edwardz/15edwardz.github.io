@@ -83,15 +83,6 @@
       border-radius:10px;
     }
     </style>
-    <script>
-      function convertlbs() {
-        total = document.getElementById("inputOne").value;   
-        document.getElementById("result").innerHTML = total/2.205; 
-          
-      }
-      </script>
-
-</script>
   </head>
 
 <body>
@@ -138,22 +129,26 @@
   </div>
   -->
 
+  <script>
+    let counts=setInterval(updated);
+    let upto=0;
+    function updated(){
+        var count= document.getElementById("counter");
+        count.innerHTML=++upto;
+
+        if(upto===1215)
+        {
+            clearInterval(counts);
+        }
+    }
+</script>
 
   <script>
-      let counts=setInterval(updated);
-      let upto=0;
-      function updated(){
-          var count= document.getElementById("counter");
-          count.innerHTML=++upto;
-
-          if(upto===1215)
-          {
-              clearInterval(counts);
-          }
-      }
+    function convertlbs() {
+      total = document.getElementById("inputOne").value;   
+      document.getElementById("result").innerHTML = total/2.205; 
+      
+    }
   </script>
-
-
-  
 </body>
 </html>
