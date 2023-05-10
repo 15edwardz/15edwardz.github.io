@@ -31,7 +31,8 @@
   </head>
 
   <style>
-    html,body {
+    html,
+    body {
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
@@ -153,9 +154,9 @@
             Student
           </p>
           <p style="font-size: 16px; font-weight: 490">
-            I am an undergraduate student at the Univeristy of Western Ontario, majoring in
-            Computer Science. I will begin my second year this fall, as part of
-            the graduating class of 2026.
+            I am an undergraduate student at the Univeristy of Western Ontario,
+            majoring in Computer Science. I will begin my second year this fall,
+            as part of the graduating class of 2026.
           </p>
           <p style="color: blueviolet; font-size: 18px; font-weight: 500">
             School Involvement
@@ -261,7 +262,7 @@
       "
     >
       <div
-        class="d-inline-block "
+        class="d-inline-block"
         style="
           display: flex;
           flex-wrap: wrap;
@@ -278,7 +279,7 @@
       >
         <img
           src="https://raw.githubusercontent.com/15edwardz/15edwardz.github.io/master/Images/RBC-Symbol.png"
-          alt="RBC lgo"
+          alt="RBC logo"
           width="120"
         />
         <br />
@@ -286,9 +287,33 @@
           <b>Software Developer Intern @ RBC Capital Makets</b>
           <br />
           As a software developer intern, I am under RBCCM's Quantitative &
-          Technology Services (QTS) Digital Channels group. I work on maintaining, updating and fixing RBC's intranet such as CMWeb, ITSWeb etc.
-          <br/> More to come...
+          Technology Services (QTS) Digital Channels group. I work on
+          maintaining, updating and fixing RBC's intranet such as CMWeb, ITSWeb
+          etc.
+          <br />
+          More to come...
         </p>
+        <p>
+          <a
+            class="btn"
+            data-toggle="collapse"
+            href="#RBCmore"
+            role="button"
+            aria-expanded="false"
+            aria-controls="RBCmore"
+          >
+            Read More
+          </a>
+        </p>
+        <div class="collapse" id="RBCmore">
+          <div class="card card-body" style="margin-bottom: 4vw;">
+            <img
+            src="https://github.com/15edwardz/15edwardz.github.io/blob/master/Images/RBC_wellington_orientation_2023.jpg?raw=true"
+            alt="RBC Orientation"
+            />
+            <p>RBC Capital Markets QTS Orientation, 155 Wellington</p>
+          </div>
+        </div>
       </div>
       <div
         class="d-inline-block"
@@ -315,16 +340,21 @@
         <p>
           <b>CS @ Western University</b>
           <br />
-          Throughout my first year at Western Univeristy, I have taken courses related to Computer Science.
-          I got hands-on experience with Python and Java, as well as learning the basics of data structures, 
-          data types and algorithms. My projects can be found on my Github, 
-          <a href="https://github.com/15edwardz" target="_blank"; style="color:blueviolet ;">Click here to view my profile.</a>
+          Throughout my first year at Western Univeristy, I have taken courses
+          related to Computer Science. I got hands-on experience with Python and
+          Java, as well as learning the basics of data structures, data types
+          and algorithms. My projects can be found on my Github,
+          <a
+            href="https://github.com/15edwardz"
+            target="_blank"
+            ;
+            style="color: blueviolet"
+            >Click here to view my profile.</a
+          >
 
-          <br/>
-          
+          <br />
         </p>
       </div>
-  
     </div>
 
     <script
@@ -338,18 +368,5 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      var prevScrollpos = window.pageYOffset;
-      window.onscroll = function () {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-          document.getElementById("navbar").style.top = "0";
-        } else {
-          document.getElementById("navbar").style.top = "0px";
-        }
-        prevScrollpos = currentScrollPos;
-      };
-    </script>
   </body>
 </html>
