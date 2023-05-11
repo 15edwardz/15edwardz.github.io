@@ -85,6 +85,12 @@
       transform-origin: bottom left;
     }
 
+    .counter-wrapper {
+      display: flex; 
+      justify-content: center; 
+    }
+
+
   </style>
 
   <body>
@@ -301,7 +307,12 @@
           <p style="color: blueviolet; font-size: 18px; font-weight: 500">
             SBD Total
           </p>
-          <p style="font-size: 16px; font-weight: 490">620kg || 1367lbs</p>
+
+          <div class="counter-wrapper" style="font-size: 16px; font-weight: 500">
+            <div id="counter1" class="counter">0 lbs</div>
+            <p> &nbsp||&nbsp</p>
+            <div id="counter2" class="counter">0 lbs</div>
+          </div>
         </div>
       </div>
     </div>
@@ -477,6 +488,57 @@
         >
       </div>
     </footer>
+
+    <script>
+      const counter1 = document.getElementById("counter1");
+      const counter2 = document.getElementById("counter2");
+
+      const start1 = 0;
+      const end1 = 620;
+
+      const start2 = 0;
+      const end2 = 1367;
+
+      const duration1 = 2000; 
+      const interval1 = 10;
+
+      const duration2 = 2000; 
+      const interval2 = 10; 
+
+      const increment1 = (end1 - start1) / (duration1 / interval1);
+      let currentTime1 = 0;
+
+      const increment2 = (end2 - start2) / (duration2 / interval2);
+      let currentTime2 = 0;
+
+      const animateCounter1 = () => {
+        currentTime1 += interval1;
+
+        const newValue1 = Math.round(increment1 * currentTime1 + start1);
+
+        counter1.innerHTML = `${newValue1} kgs`;
+
+        if (currentTime1 >= duration1) {
+          clearInterval(timer1);
+          counter1.innerHTML = `${end1} kgs`;
+        }
+      };
+
+      const animateCounter2 = () => {
+        currentTime2 += interval2;
+
+        const newValue2 = Math.round(increment2 * currentTime2 + start2);
+
+        counter2.innerHTML = `${newValue2} lbs`;
+
+        if (currentTime2 >= duration2) {
+          clearInterval(timer2);
+          counter2.innerHTML = `${end2} lbs`;
+        }
+      };
+      const timer1 = setInterval(animateCounter1, interval1);
+      const timer2 = setInterval(animateCounter2, interval2);
+    </script>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
