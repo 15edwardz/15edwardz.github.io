@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Condensed&family=Teko&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Condensed&family=Teko&amily=Instrument+Sans&display=swap"
       rel="stylesheet"
     />
 
@@ -28,6 +28,7 @@
       src="https://kit.fontawesome.com/d7010814d9.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
 
   <style>
@@ -35,6 +36,25 @@
     body {
       scroll-behavior: smooth;
       overflow-x: hidden;
+    }
+    .btn-primary {
+      color: #fff;
+      background-color: blueviolet;
+      border-color: aliceblue; /*set the color you want here*/
+    }
+    .btn-primary:hover {
+      background-color: rgb(113, 43, 179);
+      border-color: aliceblue; /*set the color you want here*/
+    }
+    a {
+      color: aliceblue;
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: rgb(177, 209, 241) !important;
     }
   </style>
 
@@ -67,7 +87,7 @@
               <a href="#experience" class="nav-link">Experience</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Contact</a>
+              <a href="#contact" class="nav-link">Contact</a>
             </li>
           </ul>
         </div>
@@ -253,7 +273,7 @@
     <div
       id="experience"
       style="
-        padding-top: 14%;
+        padding-top: 5%;
         padding-bottom: 7%;
         background-color: rgb(240, 246, 255);
         height: auto;
@@ -274,7 +294,7 @@
           margin-right: 2vw;
           width: auto;
           margin-top: 5vw;
-          max-width:95vw;
+          max-width: 95vw;
         "
       >
         <img
@@ -302,17 +322,19 @@
             aria-expanded="false"
             aria-controls="RBCmore"
           >
-            Read More
+            <span class="collapsed" style="color: blueviolet"> Show more </span>
           </a>
         </p>
+
         <div class="collapse" id="RBCmore">
           <div
             class="card card-body"
-            style="margin-bottom: 6vw; background-color: aliceblue;"
+            style="margin-bottom: 6vw; background-color: aliceblue"
           >
             <img
               src="https://github.com/15edwardz/15edwardz.github.io/blob/master/Images/RBC_wellington_orientation_2023.jpg?raw=true"
-              alt="RBC Orientation" style="padding-bottom:0.1vw ;"
+              alt="RBC Orientation"
+              style="padding-bottom: 0.1vw"
             />
             <p>RBC Capital Markets QTS Orientation, 155 Wellington St West</p>
           </div>
@@ -359,6 +381,53 @@
         </p>
       </div>
     </div>
+
+    <div
+      id="contact"
+      style="
+        padding-top: 5%;
+        padding-bottom: 7%;
+        background-color: rgb(240, 246, 255);
+        height: auto;
+        text-align: center;
+        background-color: blueviolet;
+      "
+    >
+      <h1
+        style="
+          color: aliceblue;
+          font-family: 'Instrument Sans', sans-serif;
+          padding-bottom: 3vw;
+        "
+      >
+        <b>Get In Touch</b>
+      </h1>
+      <a
+        class="btn btn-primary btn-outline-light btn-lg"
+        href="mailto:15edwardz@gmail.com"
+        target="_blank"
+        role="button"
+        style="color: aliceblue"
+        >Say Hello</a
+      >
+    </div>
+    <footer
+      style="
+        background-color: blueviolet;
+        min-height: 50px;
+        box-shadow: 0 5px 10px 0 rgba(10, 9, 9, 0.2);
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+      "
+    >
+      <div style="text-align: center; color: aliceblue">
+        <a
+          href="https://github.com/15edwardz/15edwardz.github.io"
+          target="_blank"
+          >Designed by Edward Zhang</a
+        >
+      </div>
+    </footer>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
