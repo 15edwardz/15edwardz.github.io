@@ -4,8 +4,10 @@
     <title>Edward Zhang</title>
     <meta charset="utf-8" />
     <meta name="author" content="Edward Zhang" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
 
     <link
       rel="stylesheet"
@@ -55,7 +57,30 @@
 
     a:hover {
       text-decoration: none;
-      color: rgb(177, 209, 241) !important;
+      color: rgb(145, 145, 240) !important;
+    }
+
+    .hover-underline-animation {
+      display: inline-block;
+      position: relative;
+    }
+
+    .hover-underline-animation::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: blueviolet;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
     }
   </style>
 
@@ -111,7 +136,10 @@
               >
                 Edward Zhang
               </h1>
-              <h4 class="mb-3" style="font-size: 3vw; color: rgb(218, 230, 241);">
+              <h4
+                class="mb-3"
+                style="font-size: 3vw; color: rgb(218, 230, 241)"
+              >
                 Software Developer ┃ Powerlifter
               </h4>
               <ul class="social" style="text-align: left">
@@ -122,7 +150,11 @@
                     rel="noopener noreferrer"
                     ><i
                       class="fa fa-linkedin-square"
-                      style="font-size: 5vw; color: rgb(218, 230, 241); margin-left: 0px"
+                      style="
+                        font-size: 5vw;
+                        color: rgb(218, 230, 241);
+                        margin-left: 0px;
+                      "
                     ></i
                   ></a>
                   &nbsp;
@@ -132,7 +164,7 @@
                     rel="noopener noreferrer"
                     ><i
                       class="fa fa-github-square"
-                      style="font-size: 5vw; color: rgb(218, 230, 241);"
+                      style="font-size: 5vw; color: rgb(218, 230, 241)"
                     ></i
                   ></a>
                 </div>
@@ -191,8 +223,8 @@
               margin: 0;
             "
           >
-            <li style="padding-bottom: 3px;">Western Strength (Exec)</li>
-            <li style="padding-bottom: 3px;">Western Foot Patrol (SUV)</li>
+            <li style="padding-bottom: 3px">Western Strength (Exec)</li>
+            <li style="padding-bottom: 3px">Western Foot Patrol (SUV)</li>
             <li>Run With Us UWO</li>
           </ul>
         </div>
@@ -371,6 +403,7 @@
           Java, as well as learning the basics of data structures, data types
           and algorithms. My projects can be found on my Github,
           <a
+            class="hover-underline-animation"
             href="https://github.com/15edwardz"
             target="_blank"
             ;
@@ -403,9 +436,10 @@
       >
         <b>Get In Touch</b>
       </h1>
-      <p style="color: rgb(218, 230, 241); padding-bottom: 2vw;">My inbox is always open, feel free to reach out to me and I'll get back to you.
-      <br/>
-      
+      <p style="color: rgb(218, 230, 241); padding-bottom: 2vw">
+        My inbox is always open, feel free to reach out to me and I'll get back
+        to you.
+        <br />
       </p>
       <a
         class="btn btn-primary btn-outline-light btn-lg"
