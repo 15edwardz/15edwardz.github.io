@@ -86,11 +86,9 @@
     }
 
     .counter-wrapper {
-      display: flex; 
-      justify-content: center; 
+      display: flex;
+      justify-content: center;
     }
-
-
   </style>
 
   <body>
@@ -308,10 +306,13 @@
             SBD Total
           </p>
 
-          <div class="counter-wrapper" style="font-size: 16px; font-weight: 500">
-            <div id="counter1" class="counter">0 lbs</div>
-            <p> &nbsp||&nbsp</p>
-            <div id="counter2" class="counter">0 lbs</div>
+          <div
+            class="counter-wrapper"
+            style="font-size: 16px; font-weight: 500"
+          >
+            <div id="counter1" class="counter"></div>
+            <p>&nbsp||&nbsp</p>
+            <div id="counter2" class="counter"></div>
           </div>
         </div>
       </div>
@@ -490,54 +491,54 @@
     </footer>
 
     <script>
+      // Get the counter elements
       const counter1 = document.getElementById("counter1");
       const counter2 = document.getElementById("counter2");
 
+      // Set the starting and ending numbers for the counters
       const start1 = 0;
       const end1 = 620;
 
       const start2 = 0;
       const end2 = 1367;
 
-      const duration1 = 2000; 
-      const interval1 = 10;
+      // Set the animation duration and interval time for the counters
+      const duration = 5000; // in milliseconds
+      const interval = 10; // in milliseconds
 
-      const duration2 = 2000; 
-      const interval2 = 10; 
+      // Calculate the increment value and starting time for the counters
+      const increment1 = (end1 - start1) / (duration / interval);
+      const increment2 = (end2 - start2) / (duration / interval);
 
-      const increment1 = (end1 - start1) / (duration1 / interval1);
-      let currentTime1 = 0;
+      let currentTime = 0;
 
-      const increment2 = (end2 - start2) / (duration2 / interval2);
-      let currentTime2 = 0;
+      // Create the animation function for the counters
+      const animateCounters = () => {
+        currentTime += interval;
 
-      const animateCounter1 = () => {
-        currentTime1 += interval1;
+        let newValue1 = Math.round(increment1 * currentTime + start1);
+        let newValue2 = Math.round(increment2 * currentTime + start2);
 
-        const newValue1 = Math.round(increment1 * currentTime1 + start1);
-
-        counter1.innerHTML = `${newValue1} kgs`;
-
-        if (currentTime1 >= duration1) {
-          clearInterval(timer1);
-          counter1.innerHTML = `${end1} kgs`;
+        if (newValue1 > end1) {
+          newValue1 = end1;
         }
-      };
 
-      const animateCounter2 = () => {
-        currentTime2 += interval2;
+        if (newValue2 > end2) {
+          newValue2 = end2;
+        }
 
-        const newValue2 = Math.round(increment2 * currentTime2 + start2);
-
+        counter1.innerHTML = `${newValue1} kg`;
         counter2.innerHTML = `${newValue2} lbs`;
 
-        if (currentTime2 >= duration2) {
-          clearInterval(timer2);
+        if (currentTime >= duration) {
+          clearInterval(timer);
+          counter1.innerHTML = `${end1} kg`;
           counter2.innerHTML = `${end2} lbs`;
         }
       };
-      const timer1 = setInterval(animateCounter1, interval1);
-      const timer2 = setInterval(animateCounter2, interval2);
+
+      // Start the animation for the counters
+      const timer = setInterval(animateCounters, interval);
     </script>
 
     <script
