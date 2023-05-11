@@ -89,6 +89,9 @@
       display: flex;
       justify-content: center;
     }
+    .counter {
+      transition: opacity 3s ease-in-out; /* Add a transition effect to opacity */
+    }
   </style>
 
   <body>
@@ -537,8 +540,25 @@
         }
       };
 
-      // Start the animation for the counters
-      const timer = setInterval(animateCounters, interval);
+      // Create the intersection observer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Start the animation for the counters
+            const timer = setInterval(animateCounters, interval);
+
+            // Set the opacity of the counter elements to 1
+            counter1.style.opacity = 1;
+            counter2.style.opacity = 1;
+
+            // Unobserve the target element to stop observing it
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      // Observe the target element
+      observer.observe(document.querySelector(".counter-wrapper"));
     </script>
 
     <script
