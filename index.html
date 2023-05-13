@@ -37,7 +37,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Condensed&family=Teko&amily=Instrument+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Condensed&family=Teko&amily=Instrument+Sans&family=Nabla&display=swap"
       rel="stylesheet"
     />
 
@@ -126,9 +126,7 @@
     }
 
     .zoom:hover {
-      transform: scale(
-        1.2
-      ); 
+      transform: scale(1.2);
     }
   </style>
 
@@ -533,10 +531,10 @@
     <!-- Button trigger modal -->
     <button
       type="button"
-      class="btn "
+      class="btn"
       data-toggle="modal"
       data-target="#versionModal"
-      style="margin: 2vw; border-width: 0px;"
+      style="margin: 2vw; border-width: 0px"
     >
       <img
         class="zoom"
@@ -557,9 +555,13 @@
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="versionModalLabel">
-              Previous Versions
+          <div class="modal-header" style="background-color: blueviolet;">
+            <h5
+              class="modal-title"
+              id="versionModalLabel"
+              style="font-family: 'Nabla', cursive"
+            >
+              Go back in time...
             </h5>
             <button
               type="button"
@@ -570,12 +572,22 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">hello</div>
-          <div class="modal-footer">
+          <div class="modal-body" style="background-color: aliceblue">
+            <a
+            class="hover-underline-animation"
+            href="https://15edwardz.github.io/index-old"
+            target="_blank"
+            ;
+            style="color: blueviolet"
+            >Edward Zhang (v1)</a
+          >
+          </div>
+          <div style="background-color: aliceblue">
             <button
               type="button"
               class="btn btn-secondary"
               data-dismiss="modal"
+              style="float:right; margin-bottom: 15px; margin-right: 15px;"
             >
               Close
             </button>
