@@ -117,7 +117,7 @@
     }
     @media (max-width: 768px) {
       .col {
-        flex-basis: 100% !important
+        flex-basis: 100% !important;
       }
     }
   </style>
@@ -224,7 +224,7 @@
           text-align: center;
           background-color: blueviolet;
           opacity: 0;
-          transition: opacity 1s ease-in-out;
+          transition: opacity 0.5s ease-in-out;
           padding-top: 50px;
         "
       >
@@ -267,9 +267,13 @@
                   margin: 0;
                 "
               >
-                <li style="padding-bottom: 3px">Western Strength (Exec)</li>
-                <li style="padding-bottom: 3px">Western Foot Patrol (SUV)</li>
-                <li>Run With Us UWO</li>
+                <li style="padding-bottom: 3px">
+                  Western Strength (Executive 2022-present)
+                </li>
+                <li style="padding-bottom: 3px">
+                  Western Foot Patrol (SUV Driver)
+                </li>
+                <li>Run With Us UWO (Exceutive, 2022-2023)</li>
               </ul>
             </div>
             <div class="col" style="flex-basis: 33.33%; padding: 20px">
@@ -308,7 +312,6 @@
                 <li>Spring</li>
                 <li>Visual Studio</li>
               </ul>
-              <br />
             </div>
             <div class="col" style="flex-basis: 33.33%; padding: 20px">
               <div class="fa-3x" style="padding-top: 15%">
@@ -390,7 +393,7 @@
           />
           <br />
           <p>
-            <b>Software Developer Intern @ RBC Capital Makets</b>
+            <b>Software Developer Intern @ RBC Capital Markets</b>
             <br />
             As a software developer intern, I am under RBCCM's Quantitative &
             Technology Services (QTS) Digital Channels group. I work on
@@ -461,7 +464,7 @@
             Throughout my first year at Western Univeristy, I have taken courses
             related to Computer Science. I got hands-on experience with Python
             and Java, as well as learning the basics of data structures, data
-            types and algorithms. My projects can be found on my Github,
+            types and algorithms. My projects can be found on Github,
             <a
               class="hover-underline-animation"
               href="https://github.com/15edwardz"
@@ -517,6 +520,54 @@
         style="color: aliceblue"
         >Say Hello</a
       >
+    </div>
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#versionModal"
+      style="margin: 2vw; border-width: 0px;"
+    >
+    <img src="https://i.ibb.co/CW5Wvry/buttonpng.png" alt="buttonpng"/>
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="versionModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="versionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="versionModalLabel">
+              Previous Versions
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">hello</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <footer
       style="
