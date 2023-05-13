@@ -115,11 +115,16 @@
     .counter {
       transition: opacity 3s ease-in-out; /* Add a transition effect to opacity */
     }
+    @media (max-width: 768px) {
+      .col {
+        flex-basis: 100% !important
+      }
+    }
   </style>
 
   <body>
     <header
-      style="height: auto; background-color: blueviolet; margin-bottom: 0px"
+      style="height: 65vw; background-color: blueviolet; margin-bottom: 0px"
     >
       <nav
         class="navbar navbar-dark navbar-expand-sm"
@@ -139,8 +144,8 @@
         </button>
 
         <div class="navbar-collapse collapse" id="navbar" navbar>
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item"><a href="#top" class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</a></li>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#top" class="nav-link">Home</a></li>
             <li class="nav-item">
               <a href="#intro" class="nav-link">About</a>
             </li>
@@ -154,60 +159,62 @@
         </div>
       </nav>
       <!-- Navbar -->
-    </header>
-    
-    <div id="title">
-      <br />
+
       <div>
+        <br />
+        <br />
         <div>
-          <div class="text-white" style="text-align: left; padding-left: 5vw">
-            <h1
-              class="mb-3"
-              style="
-                font-family: 'Alfa Slab One', cursive;
-                font-size: 9vw;
-                padding-top: 10%;
-              "
-            >
-              Edward Zhang
-            </h1>
-            <h4
-              class="mb-3"
-              style="font-size: 3vw; color: rgb(218, 230, 241)"
-            >
-              Software Developer ┃ Powerlifter
-            </h4>
-            <ul class="social" style="text-align: left">
-              <div>
-                <a
-                  href="https://www.linkedin.com/in/15edwardz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i
-                    class="fa fa-linkedin-square"
-                    style="
-                      font-size: 5vw;
-                      color: rgb(218, 230, 241);
-                      margin-left: 0px;
-                    "
-                  ></i
-                ></a>
-                &nbsp;
-                <a
-                  href="https://github.com/15edwardz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i
-                    class="fa fa-github-square"
-                    style="font-size: 5vw; color: rgb(218, 230, 241)"
-                  ></i
-                ></a>
-              </div>
-            </ul>
+          <div>
+            <div class="text-white" style="text-align: left; padding-left: 5vw">
+              <h1
+                class="mb-3"
+                style="
+                  font-family: 'Alfa Slab One', cursive;
+                  font-size: 9vw;
+                  padding-top: 10%;
+                "
+              >
+                Edward Zhang
+              </h1>
+              <h4
+                class="mb-3"
+                style="font-size: 3vw; color: rgb(218, 230, 241)"
+              >
+                Software Developer ┃ Powerlifter
+              </h4>
+              <ul class="social" style="text-align: left">
+                <div>
+                  <a
+                    href="https://www.linkedin.com/in/15edwardz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i
+                      class="fa fa-linkedin-square"
+                      style="
+                        font-size: 5vw;
+                        color: rgb(218, 230, 241);
+                        margin-left: 0px;
+                      "
+                    ></i
+                  ></a>
+                  &nbsp;
+                  <a
+                    href="https://github.com/15edwardz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i
+                      class="fa fa-github-square"
+                      style="font-size: 5vw; color: rgb(218, 230, 241)"
+                    ></i
+                  ></a>
+                </div>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </header>
+
     <div style="background-color: blueviolet">
       <div
         id="intro"
@@ -235,113 +242,115 @@
             margin-right: 2vw;
           "
         >
-          <div class="col" style="flex-basis: 33.33%; padding: 20px">
-            <div class="fa-3x" style="padding-top: 15%">
-              <i class="fa-solid fa-school" style="text-align: center"></i>
+          <div class="row">
+            <div class="col" style="flex-basis: 33.33%; padding: 20px">
+              <div class="fa-3x" style="padding-top: 15%">
+                <i class="fa-solid fa-school" style="text-align: center"></i>
+              </div>
+              <p style="font-family: 'Teko', sans-serif; font-size: 45px">
+                Student
+              </p>
+              <p style="font-size: 16px; font-weight: 490">
+                I am an undergraduate student at the Univeristy of Western
+                Ontario, majoring in Computer Science. I will begin my second
+                year this fall, as part of the graduating class of 2026.
+              </p>
+              <p style="color: blueviolet; font-size: 18px; font-weight: 500">
+                School Involvement
+              </p>
+              <ul
+                style="
+                  font-size: 16px;
+                  font-weight: 490;
+                  list-style-type: none;
+                  padding: 0;
+                  margin: 0;
+                "
+              >
+                <li style="padding-bottom: 3px">Western Strength (Exec)</li>
+                <li style="padding-bottom: 3px">Western Foot Patrol (SUV)</li>
+                <li>Run With Us UWO</li>
+              </ul>
             </div>
-            <p style="font-family: 'Teko', sans-serif; font-size: 45px">
-              Student
-            </p>
-            <p style="font-size: 16px; font-weight: 490">
-              I am an undergraduate student at the Univeristy of Western
-              Ontario, majoring in Computer Science. I will begin my second year
-              this fall, as part of the graduating class of 2026.
-            </p>
-            <p style="color: blueviolet; font-size: 18px; font-weight: 500">
-              School Involvement
-            </p>
-            <ul
-              style="
-                font-size: 16px;
-                font-weight: 490;
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-              "
-            >
-              <li style="padding-bottom: 3px">Western Strength (Exec)</li>
-              <li style="padding-bottom: 3px">Western Foot Patrol (SUV)</li>
-              <li>Run With Us UWO</li>
-            </ul>
-          </div>
-          <div class="col" style="flex-basis: 33.33%; padding: 20px">
-            <div class="fa-3x" style="padding-top: 15%">
-              <i class="fa-solid fa-briefcase" style="text-align: center"></i>
-            </div>
-            <p style="font-family: 'Teko', sans-serif; font-size: 45px">
-              Developer
-            </p>
-            <p style="font-size: 16px; font-weight: 490">
-              I enjoy coding from scratch and bringing my ideas to life, as with
-              this website! My skills lie in frontend web development but my
-              ultimate goal is to become a full-stack developer.
-            </p>
-            <p style="color: blueviolet; font-size: 18px; font-weight: 500">
-              Languages
-            </p>
-            <p style="font-size: 16px; font-weight: 490">
-              HTML, CSS, JavaScript, Java, Python, SQL
-            </p>
-            <p style="color: blueviolet; font-size: 18px; font-weight: 500">
-              Dev Tools
-            </p>
-            <ul
-              style="
-                font-size: 16px;
-                font-weight: 490;
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-              "
-            >
-              <li>Bootstrap</li>
-              <li>React</li>
-              <li>Github</li>
-              <li>Spring</li>
-              <li>Visual Studio</li>
-            </ul>
-            <br />
-          </div>
-          <div class="col" style="flex-basis: 33.33%; padding: 20px">
-            <div class="fa-3x" style="padding-top: 15%">
-              <i class="fa-solid fa-dumbbell" style="text-align: center"></i>
-            </div>
-            <p style="font-family: 'Teko', sans-serif; font-size: 45px">
-              Powerlifter
-            </p>
-            <p style="font-size: 16px; font-weight: 490">
-              I am passionate about powerlifting and enjoy spending my free time
-              lifting with friends. I compete under the OPA/CPU federation and
-              represent Western Strength as a 93kg junior.
-            </p>
-            <p style="color: blueviolet; font-size: 18px; font-weight: 500">
-              Achievements
-            </p>
-            <ul
-              style="
-                font-size: 16px;
-                font-weight: 490;
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-              "
-            >
-              <li>National Qualifier</li>
-              <li>Provincial Qualifer</li>
-              <li>3rd place WSCC 2023</li>
+            <div class="col" style="flex-basis: 33.33%; padding: 20px">
+              <div class="fa-3x" style="padding-top: 15%">
+                <i class="fa-solid fa-briefcase" style="text-align: center"></i>
+              </div>
+              <p style="font-family: 'Teko', sans-serif; font-size: 45px">
+                Developer
+              </p>
+              <p style="font-size: 16px; font-weight: 490">
+                I enjoy coding from scratch and bringing my ideas to life, as
+                with this website! My skills lie in frontend web development but
+                my ultimate goal is to become a full-stack developer.
+              </p>
+              <p style="color: blueviolet; font-size: 18px; font-weight: 500">
+                Languages
+              </p>
+              <p style="font-size: 16px; font-weight: 490">
+                HTML, CSS, JavaScript, Java, Python, SQL
+              </p>
+              <p style="color: blueviolet; font-size: 18px; font-weight: 500">
+                Dev Tools
+              </p>
+              <ul
+                style="
+                  font-size: 16px;
+                  font-weight: 490;
+                  list-style-type: none;
+                  padding: 0;
+                  margin: 0;
+                "
+              >
+                <li>Bootstrap</li>
+                <li>React</li>
+                <li>Github</li>
+                <li>Spring</li>
+                <li>Visual Studio</li>
+              </ul>
               <br />
-            </ul>
-            <p style="color: blueviolet; font-size: 18px; font-weight: 500">
-              SBD Total
-            </p>
+            </div>
+            <div class="col" style="flex-basis: 33.33%; padding: 20px">
+              <div class="fa-3x" style="padding-top: 15%">
+                <i class="fa-solid fa-dumbbell" style="text-align: center"></i>
+              </div>
+              <p style="font-family: 'Teko', sans-serif; font-size: 45px">
+                Powerlifter
+              </p>
+              <p style="font-size: 16px; font-weight: 490">
+                I am passionate about powerlifting and enjoy spending my free
+                time lifting with friends. I compete under the OPA/CPU
+                federation and represent Western Strength as a 93kg junior.
+              </p>
+              <p style="color: blueviolet; font-size: 18px; font-weight: 500">
+                Achievements
+              </p>
+              <ul
+                style="
+                  font-size: 16px;
+                  font-weight: 490;
+                  list-style-type: none;
+                  padding: 0;
+                  margin: 0;
+                "
+              >
+                <li>National Qualifier</li>
+                <li>Provincial Qualifer</li>
+                <li>3rd place WSCC 2023</li>
+                <br />
+              </ul>
+              <p style="color: blueviolet; font-size: 18px; font-weight: 500">
+                SBD Total
+              </p>
 
-            <div
-              class="counter-wrapper"
-              style="font-size: 16px; font-weight: 500"
-            >
-              <div id="counter1" class="counter"></div>
-              <p>&nbsp||&nbsp</p>
-              <div id="counter2" class="counter"></div>
+              <div
+                class="counter-wrapper"
+                style="font-size: 16px; font-weight: 500"
+              >
+                <div id="counter1" class="counter"></div>
+                <p>&nbsp||&nbsp</p>
+                <div id="counter2" class="counter"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -594,12 +603,11 @@
         const containerTop = container.getBoundingClientRect().top;
         const containerBottom = container.getBoundingClientRect().bottom;
 
-        if (containerTop < window.innerHeight - 450 && containerBottom > 0) {
+        if (containerTop < window.innerHeight && containerBottom > 0) {
           container.style.opacity = 1;
         }
       });
     </script>
-
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
