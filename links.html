@@ -39,6 +39,10 @@
       min-height: 100vh;
       background: -webkit-linear-gradient(bottom, #c33764, #1d2671);
     }
+
+    header{
+        margin-top: 10vw
+    }
     .center {
       margin: auto;
       width: 60%;
@@ -50,18 +54,52 @@
       padding-bottom: 150px;
     }
     .container-flexible {
+      transition: transform 300ms ease-in-out;
+    }
+    .container-flexible:hover {
+      transform: translateY(-0.5rem);
+    }
+    .hover-underline-animation::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: blueviolet;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
     }
   </style>
-  
-  <body>
-    <header style="margin-top: 20vw;">
 
-    </header>
+  <body>
+    <header>
     <div>
       <!--<img src="" alt="Edward Zhang" width="500" height="600">-->
 
-      <h1 class="center">Edward Zhang</h1>
+      <h1 class="center" style="color: white">Edward Zhang</h1>
       <br />
+    </div>
+    </header>
+    <div
+      class="container-flexible center"
+      style="
+        background-color: aliceblue;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgb(61, 61, 61);
+        padding: 20px;
+        margin-bottom: 20px;
+      "
+    >
+      <a style="color: black; text-decoration:none" href="https://15edwardz.github.io/" target="_blank">
+        <div>My Website</div>
+      </a>
     </div>
     <div
       class="container-flexible center"
@@ -70,9 +108,12 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgb(61, 61, 61);
         padding: 20px;
+        margin-bottom: 20px;
       "
     >
-      hello
+      <a style="color: black; text-decoration:none" href="https://github.com/15edwardz" target="_blank">
+        <div>GitHub</div>
+      </a>
     </div>
 
     <script
