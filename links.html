@@ -70,28 +70,19 @@
     .container-flexible:hover {
       transform: translateY(-0.5rem);
     }
-    .hover-underline-animation::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: blueviolet;
-      transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
+
+    .icenter {
+      margin: auto;
+      width: 60%;
+      padding: 10px;
+      text-align: center;
     }
 
-    .hover-underline-animation:hover::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
+    .icons {
+      transition: transform 300ms ease-in-out;
     }
-
-    .centericon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .icons:hover {
+      transform: scale(1.12);
     }
   </style>
 
@@ -145,32 +136,31 @@
         </div>
       </a>
 
-      <div class="icons center">
+      <div class="icenter">
         <a
-          style="color: black; text-decoration: none; margin-right: 10px;"
+          style="color: black; text-decoration: none; margin-right: 10px"
           href="https://github.com/15edwardz"
           target="_blank"
         >
-          <i class="fa fa-github" style="font-size: 48px"></i>
-        </a>
-      
-        <a
-          style="color: black; text-decoration: none; margin: 10px;"
-          href="https://www.linkedin.com/in/15edwardz/"
-          target="_blank"
-        >
-          <i class="fa fa-linkedin" style="font-size: 48px"></i>
+          <i class="fa fa-github icons" style="font-size: 48px"></i>
         </a>
 
         <a
-          style="color: black; text-decoration: none; margin-left: 10px;"
+          style="color: black; text-decoration: none; margin: 10px"
+          href="https://www.linkedin.com/in/15edwardz/"
+          target="_blank"
+        >
+          <i class="fa fa-linkedin icons" style="font-size: 48px"></i>
+        </a>
+
+        <a
+          style="color: black; text-decoration: none; margin-left: 10px"
           href="https://www.instagram.com/calfdaddy93kg/"
           target="_blank"
         >
-          <i class="fa fa-instagram" style="font-size: 50px"></i>
+          <i class="fa fa-instagram icons" style="font-size: 50px"></i>
         </a>
       </div>
-      
     </main>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
