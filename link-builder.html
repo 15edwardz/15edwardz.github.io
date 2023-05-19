@@ -244,7 +244,18 @@
             +'    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n'
             +'    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&family=Nabla&family=Signika+Negative:wght@500&display=swap" rel="stylesheet"/>\n';
           htmlCode += '    <script src="https://kit.fontawesome.com/d7010814d9.js" crossorigin="anonymous">\<\/script>\n';
-          htmlCode += "  </head>\n";
+          htmlCode += '  </head>\n';
+          htmlCode += '  <script>\n'
+            +'    html, body {scroll-behavior: smooth; overflow-x: hidden; min-height: 100vh; background-color: rgb(90, 88, 133);\n'
+            +'    header {margin-top: 10vw;}\n'
+            +'    .center {margin: auto; width: 60%; padding: 10px; text-align: center;}\n'
+            +'    h1 {font-family: "Signika Negative", sans-serif; padding-bottom: 150px;}\n'
+            +'    .container-flexible {transition: transform 300ms ease-in-out;}\n'
+            +'    .container-flexible:hover {transform: translateY(-0.5rem);}\n'
+            +'    .icenter {margin: auto;width: 60%;padding: 10px; text-align: center;}\n'
+            +'    .icons {transition: transform 300ms ease-in-out;}\n'
+            +'    .icons:hover {transform: scale(1.12);}\n';
+          htmlCode += '  \<\/script>\n';
           htmlCode += "  <body>\n";
           htmlCode += "    <h1>" + name + "</h1>\n";
           htmlCode += "    <ul>\n";
