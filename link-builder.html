@@ -99,21 +99,35 @@
       display: inline-block;
     }
 
+    strong{
+      font-size: 25px;
+    }
+
     #outputContainer {
     text-align: left; /* Added text-align property to align the generated code to the left */
   }
 
   @media (max-width: 768px) {
     aside.pc { 
-      display: none; 
-    }   
+      display: none;
+    }  
 
+    .mobile{
+      margin-left:30% ;
     }
+
+    h1.small{
+      font-size: 30px;
+    }
+
+
+
     .hover-underline-animation {
       display: inline-block;
       position: relative;
       color: #0087ca;
     }
+  }
 
     .hover-underline-animation::after {
       content: '';
@@ -136,9 +150,10 @@
 
   <main>
     <aside class="pc">
-      <h2>Before You Begin...</h2>
+      <strong class="pc">Before You Begin...</strong>
       <br>
-      Your link input must include the https://
+      <br>
+      Your link must include https://
       <br>
       <br>
       Tip: Hover over the blue text for info
@@ -155,8 +170,8 @@
       <a class="hover-underline-animation" href="mailto:15edwardz@gmail.com" target="_blank" style="color:rgb(230, 207, 207); text-decoration:none">Email Me</a>
 
     </aside>
-    <div class="container center" display="inline-block">
-      <h1>Link in Bio Builder</h1>
+    <div class="container center mobile" display="inline-block">
+      <h1 class="small">Link in Bio Builder</h1>
       <br />
       <form id="builderForm">
         
@@ -325,9 +340,14 @@
 
           // Display the generated code
           $("#outputCode").text(htmlCode).css({
-            "width":"900px"
+            "min-width":"auto",
+            "border-bottom": "1px solid #b9a2eb",
+            "border-left": "1px solid #b9a2eb",
+            "padding-left":"10px",
+            "padding-bottom":"10px"
           })
           ;
+
 
           $("#outputContainer").removeClass("hide");
         });
