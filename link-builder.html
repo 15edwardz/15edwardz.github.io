@@ -62,7 +62,7 @@
     body {
       scroll-behavior: smooth;
       overflow-x: hidden;
-      min-height: 100vh;
+      min-height: 80vh;
       background-color: rgb(90, 88, 133);
     }
     .center {
@@ -70,6 +70,8 @@
       width: 60%;
       padding: 10px;
       text-align: center;
+      display: inline-block;
+
     }
 
     .container {
@@ -93,7 +95,8 @@
       padding-left: 15px;
       margin-left: 15px;
       float: left;
-
+      min-height: 100vh;
+      display: inline-block;
     }
 
     #outputContainer {
@@ -106,15 +109,51 @@
     }   
 
     }
+    .hover-underline-animation {
+      display: inline-block;
+      position: relative;
+      color: #0087ca;
+    }
+
+    .hover-underline-animation::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #1ba5ea;
+      transform-origin: bottom left;
+      transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   </style>
 
   <main>
-    <aside class="pc">Your link input should look something like this:
+    <aside class="pc">
+      <h2>Before You Begin...</h2>
       <br>
-      https://15edwardz.github.io/link-builder
+      Your link input must include the https://
       <br>
-      including the https.
-      Tip: Hover over the blue text for information about each section
+      <br>
+      Tip: Hover over the blue text for info
+      <br> 
+      <br>     
+      <a class="hover-underline-animation" href="https://www.w3schools.com/icons/fontawesome_icons_webapp.asp" target="_blank" style="color:rgb(185, 193, 237); text-decoration:none">      
+        Here is a list of icons to choose from 
+      </a><br>
+      Icon name must match one of the above icons<br>
+      (in the same fa fa- format)
+      <br>      
+      <br>
+      For feedback/input: 
+      <a class="hover-underline-animation" href="mailto:15edwardz@gmail.com" target="_blank" style="color:rgb(230, 207, 207); text-decoration:none">Email Me</a>
+
     </aside>
     <div class="container center" display="inline-block">
       <h1>Link in Bio Builder</h1>
@@ -204,6 +243,7 @@
             var iconInput = $("<input>").attr({
               type: "text",
               name: "iconName" + i,
+              value: "fa fa-",
               style: "border-radius:10px",
               required: true,
             });
@@ -232,7 +272,7 @@
           var htmlCode = '<!DOCTYPE html>\n';
           htmlCode += '<html lang="en">\n';
           htmlCode += '  <head>\n';
-          htmlCode += '    <title>" + name + "</title>\n';
+          htmlCode += '    <title>' + name + '</title>\n';
           htmlCode += 
              '    <meta charset= "utf-8"; />\n'
             +'    <meta name="author" content="' + name + '" />\n'
