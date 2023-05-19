@@ -245,6 +245,7 @@
                 type: "url",
                 name: "linkURL" + i,
                 value: "https://",
+                onfocus: "this.value=''",
                 required: true,
               })
               .css({
@@ -263,21 +264,24 @@
 
           for (var i = 1; i <= numIcons; i++) {
             var iconLabel = $("<label>").text("Icon " + i + " Name:");
-            var iconInput = $("<input>").attr({
-              type: "text",
-              value: "fa(b/s) fa-",
-              onfocus:"this.value=''",
-              name: "iconName" + i,
-              style: "border-radius:10px",
-              required: true,
-            }).css({
-              "margin-right": "10px"
-            });
+            var iconInput = $("<input>")
+              .attr({
+                type: "text",
+                value: "fa(b/s) fa-",
+                onfocus: "this.value=''",
+                name: "iconName" + i,
+                style: "border-radius:10px",
+                required: true,
+              })
+              .css({
+                "margin-right": "10px",
+              });
             var urlLabel = $("<label>").text("Icon " + i + " URL:");
             var urlInput = $("<input>").attr({
               type: "url",
               name: "iconURL" + i,
               value: "https://",
+              onfocus: "this.value=''",
               style: "border-radius:10px",
               required: true,
             });
@@ -315,8 +319,8 @@
             '    <script src="https://kit.fontawesome.com/d7010814d9.js" crossorigin="anonymous">\<\/script>\n';
           htmlCode += "  </head>\n";
           htmlCode +=
-            "  <script>\n" +
-            "    html, body {scroll-behavior: smooth; overflow-x: hidden; min-height: 100vh; background-color: rgb(90, 88, 133);\n" +
+            "  <style>\n" +
+            "    html, body {scroll-behavior: smooth; overflow-x: hidden; min-height: 100vh; background-color: rgb(90, 88, 133);}\n" +
             "    header {margin-top: 10vw;}\n" +
             "    .center {margin: auto; width: 60%; padding: 10px; text-align: center;}\n" +
             '    h1 {font-family: "Signika Negative", sans-serif; padding-bottom: 150px;}\n' +
@@ -325,17 +329,34 @@
             "    .icenter {margin: auto;width: 60%;padding: 10px; text-align: center;}\n" +
             "    .icons {transition: transform 300ms ease-in-out;}\n" +
             "    .icons:hover {transform: scale(1.12);}\n";
-          htmlCode += "  \<\/script>\n";
+          htmlCode += "  \<\/style>\n";
           htmlCode += "  <body>\n";
-          htmlCode += "    <h1>" + name + "</h1>\n";
-          htmlCode += "    <ul>\n";
+          htmlCode +=
+            "    <header>\n" +
+            "      <div>\n" +
+            '        <h1 class="center" style="color: white">' +
+            name +
+            "</h1><br>\n" +
+            "      </div>\n" +
+            "    </header>\n";
+
+          htmlCode += "    <main>\n";
 
           for (var i = 1; i <= links; i++) {
             var linkName = $("input[name=linkName" + i + "]").val();
             var linkURL = $("input[name=linkURL" + i + "]").val();
 
             htmlCode +=
-              '    <li><a href="' + linkURL + '">' + linkName + "</a></li>\n";
+              '      <a style="color: black; text-decoration: none" href="' +
+              linkURL +
+              '" target="_blank">\n' +
+              '        <div class="container-flexible center" style=" background-color: aliceblue; border-radius: 10px; box-shadow: 0 0 10px rgb(61, 61, 61); padding: 20px; margin-bottom: 20px;">\n' +
+              '          <i class="fa-solid fa-globe" style="vertical-align: middle"></i>\n' +
+              '          <div style="display: inline-block; margin-left: 10px">' +
+              linkName +
+              "</div>\n" +
+              "        </div>\n" +
+              "      </a>\n";
           }
 
           htmlCode += "  </ul>\n";
@@ -349,7 +370,7 @@
               '    <img src="' + iconURL + '" alt="' + iconName + '">\n';
           }
 
-          htmlCode += "  </div>\n";
+          htmlCode += "    </main>\n";
           htmlCode += "</body>\n";
           htmlCode += "</html>";
 
