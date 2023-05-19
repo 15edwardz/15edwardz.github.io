@@ -92,11 +92,24 @@
       padding-left: 15px;
       margin-left: 15px;
       float: left;
+
+    }
+
+
+    @media (max-width: 768px) {
+      aside.pc { 
+        display: none; 
+      }   
+
     }
   </style>
 
-  <body>
-    <aside>Hi</aside>
+  <main>
+    <aside class="pc" style="">Your link input should look something like this:
+      <br>
+      https://15edwardz.github.io/link-builder
+    <br>
+  including the https.</aside>
     <div class="container center" display="inline-block">
       <h1>Link in Bio Builder</h1>
       <br />
@@ -110,29 +123,29 @@
         <br />
 
         <label for="links" title="Links will long white boxes"
-          >&nbsp # of Links:</label
+          >&nbsp  # of Links:</label
         >
-        <input type="number" id="links" style="border-radius: 10px" required />
+        <input type="number" id="links" value="0" min="0" style="border-radius: 10px" required />
 
         <div id="linksContainer"></div>
 
         <label for="icons" title="Icons are small images of a webstie/platform"
-          >&nbsp # of Icons:</label
+          >&nbsp  # of Icons:</label
         >
-        <input type="number" id="icons" style="border-radius: 10px" required />
+        <input type="number" id="icons" value="0" min="0" style="border-radius: 10px" required />
 
         <div id="iconsContainer"></div>
 
-        <button type="submit" style="border-radius: 10px">
+        <button type="submit" style="border-radius: 10px;">
           Generate HTML Code
         </button>
       </form>
 
       <div id="outputContainer" class="hide">
-        <h2>Generated HTML Code:</h2>
+        <h2 >Generated HTML Code:</h2>
         <pre id="outputCode"></pre>
       </div>
-    </div>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -162,6 +175,7 @@
               .attr({
                 type: "url",
                 name: "linkURL" + i,
+                value: "https://",
                 required: true,
               })
               .css({
@@ -190,6 +204,7 @@
             var urlInput = $("<input>").attr({
               type: "url",
               name: "iconURL" + i,
+              value: "https://",
               style: "border-radius:10px",
               required: true,
             });
