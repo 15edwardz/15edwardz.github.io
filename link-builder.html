@@ -351,7 +351,6 @@
               linkURL +
               '" target="_blank">\n' +
               '        <div class="container-flexible center" style=" background-color: aliceblue; border-radius: 10px; box-shadow: 0 0 10px rgb(61, 61, 61); padding: 20px; margin-bottom: 20px;">\n' +
-              '          <i class="fa-solid fa-globe" style="vertical-align: middle"></i>\n' +
               '          <div style="display: inline-block; margin-left: 10px">' +
               linkName +
               "</div>\n" +
@@ -359,19 +358,24 @@
               "      </a>\n";
           }
 
-          htmlCode += "  </ul>\n";
-          htmlCode += "  <div>\n";
-
+          htmlCode +=
+            '      <div class="icenter" style="margin-bottom: 30px">\n';
           for (var i = 1; i <= icons; i++) {
             var iconName = $("input[name=iconName" + i + "]").val();
             var iconURL = $("input[name=iconURL" + i + "]").val();
-
             htmlCode +=
-              '    <img src="' + iconURL + '" alt="' + iconName + '">\n';
+              '        <a style="color: black; text-decoration: none; margin-right: 10px" href="' +
+              iconURL +
+              '" target="_blank">\n' +
+              '          <i class="' +
+              iconName +
+              '" style="font-size: 48px"></i>\n' +
+              "        </a>\n";
           }
 
+          htmlCode += "      </div>\n";
           htmlCode += "    </main>\n";
-          htmlCode += "</body>\n";
+          htmlCode += "  </body>\n";
           htmlCode += "</html>";
 
           // Display the generated code
