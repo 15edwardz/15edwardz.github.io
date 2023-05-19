@@ -284,7 +284,11 @@
           htmlCode += "</html>";
 
           // Display the generated code
-          $("#outputCode").text(htmlCode);
+          $("#outputCode").text(htmlCode).css({
+            "width":"900px"
+          })
+          ;
+
           $("#outputContainer").removeClass("hide");
         });
       });
