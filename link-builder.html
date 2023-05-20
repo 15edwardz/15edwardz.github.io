@@ -108,7 +108,11 @@
     #outputContainer {
       text-align: left;
     }
-
+    @media (min-width: 768px) {
+      a.mobile-only {
+        display: none;
+      }
+    }
     @media (max-width: 768px) {
       aside.pc {
         display: none;
@@ -132,7 +136,7 @@
       <br />
       <br />
       Your link must include https://
-      <br>
+      <br />
       If the link is an email: mailto:abc@xyz.com
       <br />
       <br />
@@ -151,9 +155,14 @@
       (in the same fa fa- format)
       <br />
       <br />
-      <a href="https://www.youtube.com/watch?v=5fmBEbLItu0" target="_blank" style="color: rgb(185, 193, 237); text-decoration: none;">Live Demo</a>
-      <br>
-      <br>
+      <a
+        href="https://www.youtube.com/watch?v=5fmBEbLItu0"
+        target="_blank"
+        style="color: rgb(185, 193, 237); text-decoration: none"
+        >Live Demo</a
+      >
+      <br />
+      <br />
       For feedback/input:
       <a
         class="hover-underline-animation"
@@ -166,6 +175,14 @@
     <main>
       <div class="container center mobile" display="inline-block">
         <h1 class="small">Link in Bio Builder</h1>
+        <a
+          class="mobile-only"
+          href="https://www.youtube.com/watch?v=5fmBEbLItu0"
+          target="_blank"
+          style="color: rgb(185, 193, 237); text-decoration: none"
+          >Live Demo</a
+        >
+        <br />
         <br />
         <form id="builderForm">
           <label
@@ -174,7 +191,7 @@
             style="color: rgb(96, 212, 238)"
             >Your Name:</label
           >
-          <br>
+          <br />
           <input type="text" id="name" style="border-radius: 10px" required />
           <br />
 
@@ -184,7 +201,7 @@
             style="color: rgb(96, 212, 238)"
             >&nbsp # of Links:</label
           >
-          <br>
+          <br />
           <input
             type="number"
             id="links"
@@ -202,7 +219,7 @@
             style="color: rgb(96, 212, 238)"
             >&nbsp # of Icons:</label
           >
-          <br>
+          <br />
           <input
             type="number"
             id="icons"
@@ -214,7 +231,7 @@
 
           <div id="iconsContainer"></div>
 
-          <button type="submit" style="border-radius: 10px;">
+          <button type="submit" style="border-radius: 10px">
             Generate HTML Code
           </button>
         </form>
