@@ -216,7 +216,7 @@
 
           <label
             for="icons"
-            title="Icons are small images of a webstie/platform"
+            title="Icons are small images of a website/platform"
             style="color: rgb(96, 212, 238)"
             >&nbsp # of Icons:</label
           >
@@ -248,7 +248,7 @@
 
     <script>
       $(document).ready(function () {
-        // Dynamic creation of input fields for links
+        // Create input fields for links upon user manipulation
         $("#links").on("input", function () {
           var numLinks = parseInt($(this).val());
           var linksContainer = $("#linksContainer");
@@ -284,7 +284,7 @@
           }
         });
 
-        // Dynamic creation of input fields for icons
+        // Create input fields for links upon user manipulation
         $("#icons").on("input", function () {
           var numIcons = parseInt($(this).val());
           var iconsContainer = $("#iconsContainer");
@@ -326,7 +326,6 @@
           var links = parseInt($("#links").val());
           var icons = parseInt($("#icons").val());
 
-          // Generate the HTML code
           var htmlCode = "<!DOCTYPE html>\n";
           htmlCode += '<html lang="en">\n';
           htmlCode += "  <head>\n";
