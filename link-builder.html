@@ -112,11 +112,13 @@
       .mobile-only {
         display: none;
       }
+
     }
     @media (max-width: 768px) {
-      aside.pc {
+      .pc {
         display: none;
       }
+
 
       .mobile {
         margin-left: 25%;
@@ -160,7 +162,7 @@
         style="color: rgb(185, 193, 237); text-decoration: none"
         >Live Demo</a
       >
-      <br>
+      <br />
       <a
         href="https://www.edwardzhang.dev/links"
         target="_blank"
@@ -188,6 +190,14 @@
           style="color: rgb(185, 193, 237); text-decoration: none"
           >Live Demo</a
         >
+        <a
+          class="pc"
+          href="https://www.edwardzhang.dev/"
+          target="_blank"
+          style="color: rgb(185, 193, 237); text-decoration: none"
+          >by Edward Zhang</a
+        >
+        <br>
         <p class="mobile-only" style="padding-top: 10px; margin-bottom: 5px">
           For best experience, view in landscape mode
         </p>
@@ -415,11 +425,12 @@
           htmlCode += "      </div>\n";
           htmlCode += "    </main>\n";
           htmlCode += "  </body>\n";
-          htmlCode += "  <footer>\n"
-          +'    <div style="text-align: center; color: rgb(218, 230, 241)">\n'
-          +'        <a href="https://www.edwardzhang.dev/link-builder" target="_blank" style="text-decoration:none; color: #bdaebd">Created using Link in Bio</a>\n'
-          +'    </div>\n'
-          +'  </footer>\n'
+          htmlCode +=
+            "  <footer>\n" +
+            '    <div style="text-align: center; color: rgb(218, 230, 241)">\n' +
+            '        <a href="https://www.edwardzhang.dev/link-builder" target="_blank" style="text-decoration:none; color: #bdaebd">Created using Link in Bio</a>\n' +
+            "    </div>\n" +
+            "  </footer>\n";
           htmlCode += "</html>";
 
           // Display the generated code
