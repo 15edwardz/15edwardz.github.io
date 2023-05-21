@@ -111,6 +111,21 @@
     button.copy-button {
       border-radius: 10px;
     }
+    #linksContainer {
+      display: flex;
+      align-items: center;
+    }
+    #linksContainer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .link-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
     @media (min-width: 768px) {
       .mobile-only {
         display: none;
@@ -128,6 +143,14 @@
 
       h1.small {
         font-size: 30px;
+      }
+      #linksContainer {
+        flex-direction: column;
+      }
+
+      .link-group {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -289,39 +312,65 @@
     <script>
       $(document).ready(function () {
         // Create input fields for links upon user manipulation
-        $("#links").on("input", function () {
-          var numLinks = parseInt($(this).val());
-          var linksContainer = $("#linksContainer");
-          linksContainer.empty();
+        $(document).ready(function () {
+          // Create input fields for links upon user manipulation
+          $("#links").on("input", function () {
+            var numLinks = parseInt($(this).val());
+            var linksContainer = $("#linksContainer");
+            linksContainer.empty();
 
-          for (var i = 1; i <= numLinks; i++) {
-            var linkLabel = $("<label>").text("Link " + i + " Name:");
-            var linkInput = $("<input>")
-              .attr({
-                type: "text",
-                name: "linkName" + i,
-                required: true,
-              })
-              .css({
-                "border-radius": "10px",
-                display: "flex center",
-                "margin-right": "10px",
-              });
-            var urlLabel = $("<label>").text("Link " + i + " URL:");
-            var urlInput = $("<input>")
-              .attr({
-                type: "url",
-                name: "linkURL" + i,
-                value: "https://",
-                onfocus: "this.value=''",
-                required: true,
-              })
-              .css({
-                "border-radius": "10px",
-              });
+            for (var i = 1; i <= numLinks; i++) {
+              var linkGroup = $("<div>").addClass("link-group");
 
-            linksContainer.append(linkLabel, linkInput, urlLabel, urlInput);
-          }
+              var linkLabel = $("<label>").text("Link " + i + " Name:");
+              var linkInput = $("<input>")
+                .attr({
+                  type: "text",
+                  name: "linkName" + i,
+                  required: true,
+                })
+                .css({
+                  "border-radius": "10px",
+                  "margin-right": "10px",
+                });
+
+              var urlLabel = $("<label>").text("Link " + i + " URL:");
+              var urlInput = $("<input>")
+                .attr({
+                  type: "url",
+                  name: "linkURL" + i,
+                  value: "https://",
+                  onfocus: "this.value=''",
+                  required: true,
+                })
+                .css({
+                  "border-radius": "10px",
+                });
+
+              var linkIconLabel = $("<label>").text("Link " + i + " Icon:");
+              var linkIconInput = $("<input>")
+                .attr({
+                  type: "text",
+                  name: "linkIcon" + i,
+                  value: "fa fa-",
+                  onfocus: "this.value=''",
+                  required: true,
+                })
+                .css({
+                  "border-radius": "10px",
+                });
+
+              linkGroup.append(
+                linkLabel,
+                linkInput,
+                urlLabel,
+                urlInput,
+                linkIconLabel,
+                linkIconInput
+              );
+              linksContainer.append(linkGroup);
+            }
+          });
         });
 
         // Create input fields for links upon user manipulation
@@ -396,7 +445,9 @@
             "    .container-flexible:hover {transform: translateY(-0.5rem);}\n" +
             "    .icenter {margin: auto;width: 60%;padding: 10px; text-align: center;}\n" +
             "    .icons {transition: transform 300ms ease-in-out;}\n" +
-            "    .icons:hover {transform: scale(1.12);}\n";
+            "    .icons:hover {transform: scale(1.12);}\n" +
+            "    .linkpc {display: inline-block; margin-left: 10px;}" +
+            "@media (max-width: 600px) {div.linkpc {display: block;}}";
           htmlCode += "  \<\/style>\n";
           htmlCode += "  <body>\n";
           htmlCode +=
@@ -416,16 +467,14 @@
           for (var i = 1; i <= links; i++) {
             var linkName = $("input[name=linkName" + i + "]").val();
             var linkURL = $("input[name=linkURL" + i + "]").val();
+            var linkIcon = $("input[name=linkIcon" + i + "]").val();
 
             htmlCode +=
-              '      <a style="color: black; text-decoration: none" href="' +
-              linkURL +
-              '" target="_blank">\n' +
-              '        <div class="container-flexible center" style=" background-color: aliceblue; border-radius: 10px; box-shadow: 0 0 10px rgb(61, 61, 61); padding: 20px; margin-bottom: 20px;">\n' +
-              '          <div style="display: inline-block; margin-left: 10px">' +
+              '      <a class="container-flexible center clickable-container" href="' + linkURL + '"target="_blank" style="display: block; background-color: aliceblue; border-radius: 10px; box-shadow: 0 0 10px rgb(61, 61, 61); padding: 20px; margin-bottom: 20px; color: black; text-decoration: none;">\n'+
+              '          <i class="' + linkIcon + '" style="vertical-align: middle"></i>\n'+
+              '          <div class="linkpc">' +
               linkName +
               "</div>\n" +
-              "        </div>\n" +
               "      </a>\n";
           }
 
