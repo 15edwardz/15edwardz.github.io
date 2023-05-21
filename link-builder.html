@@ -108,6 +108,9 @@
     #outputContainer {
       text-align: left;
     }
+    button.copy-button {
+      border-radius: 10px;
+    }
     @media (min-width: 768px) {
       .mobile-only {
         display: none;
@@ -227,7 +230,6 @@
             type="text"
             id="bio"
             style="border-radius: 10px; max-width: 150px"
-            required
           />
           <br />
 
@@ -275,6 +277,9 @@
         <h2>Generated HTML Code:</h2>
         <div id="outputContainer" class="hide">
           <pre id="outputCode"></pre>
+          <button class="copy-button" onclick="copyToClipboard()">
+            Copy text
+          </button>
         </div>
       </div>
     </main>
@@ -400,7 +405,9 @@
             '        <h1 class="center" style="color: white">' +
             name +
             "</h1>\n" +
-            '        <p class="center" style="padding-bottom: 20px; color: rgb(198, 190, 190)">' + bio + '</p>\n' +
+            '        <p class="center" style="padding-bottom: 20px; color: rgb(198, 190, 190)">' +
+            bio +
+            "</p>\n" +
             "      </div>\n" +
             "    </header>\n";
 
@@ -460,6 +467,24 @@
           $("#outputContainer").removeClass("hide");
         });
       });
+    </script>
+    <script>
+      function copyToClipboard() {
+        var copyText = document.getElementById("outputCode");
+        var textArea = document.createElement("textarea");
+
+        textArea.value = copyText.textContent;
+
+        document.body.appendChild(textArea);
+
+        textArea.select();
+
+        document.execCommand("copy");
+
+        document.body.removeChild(textArea);
+
+        alert("Code copied to clipboard!");
+      }
     </script>
   </body>
 </html>
