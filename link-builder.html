@@ -15,21 +15,6 @@
 
       gtag("config", "G-15FK5RVC1D");
     </script>
-
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-5QXKWV6");
-    </script>
-    <!-- End Google Tag Manager -->
     <title>Edward Zhang | Link in Bio Tool</title>
     <link
       rel="icon"
@@ -145,16 +130,6 @@
   </style>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5QXKWV6"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <aside class="pc">
       <strong class="pc">Before You Begin...</strong>
       <br />
@@ -236,6 +211,21 @@
           <input
             type="text"
             id="name"
+            style="border-radius: 10px; max-width: 150px"
+            required
+          />
+          <br />
+
+          <label
+            for="name"
+            title="This weill be a short description about yourself"
+            style="color: rgb(96, 212, 238)"
+            >Bio:</label
+          >
+          <br />
+          <input
+            type="text"
+            id="bio"
             style="border-radius: 10px; max-width: 150px"
             required
           />
@@ -368,6 +358,7 @@
           event.preventDefault();
 
           var name = $("#name").val();
+          var bio = $("#bio").val();
           var links = parseInt($("#links").val());
           var icons = parseInt($("#icons").val());
 
@@ -408,7 +399,8 @@
             "      <div>\n" +
             '        <h1 class="center" style="color: white">' +
             name +
-            "</h1><br>\n" +
+            "</h1>\n" +
+            '        <p class="center" style="padding-bottom: 20px; color: rgb(198, 190, 190)">' + bio + '</p>\n' +
             "      </div>\n" +
             "    </header>\n";
 
