@@ -49,6 +49,7 @@
       href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Condensed&family=Teko&amily=Instrument+Sans&family=Nabla&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="link-builder.css"/>
 
     <script
       src="https://kit.fontawesome.com/d7010814d9.js"
@@ -57,125 +58,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
 
-  <style>
-    html,
-    body {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-      min-height: 80vh;
-      background-color: rgb(90, 88, 133);
-    }
-    .center {
-      margin: auto;
-      width: 60%;
-      padding: 10px;
-      text-align: center;
-      display: inline-block;
-    }
-
-    .container {
-      max-width: 45vw;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    input,
-    button {
-      margin-bottom: 10px;
-    }
-
-    .hide {
-      display: none;
-    }
-
-    aside {
-      width: 30%;
-      margin-top: 100px;
-      padding-left: 15px;
-      margin-left: 15px;
-      float: left;
-      min-height: 100vh;
-      display: inline-block;
-    }
-    strong {
-      font-size: 30px;
-    }
-    h1.small {
-      font-size: 50px;
-      font-weight: bold;
-    }
-
-    #outputContainer {
-      text-align: left;
-    }
-    button.copy-button {
-      border-radius: 10px;
-    }
-    #linksContainer {
-      display: flex;
-      align-items: center;
-    }
-    #linksContainer {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .link-group {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    @media (min-width: 768px) {
-      .mobile-only {
-        display: none;
-      }
-    }
-    @media (max-width: 768px) {
-      .pc {
-        display: none;
-      }
-
-      .mobile {
-        margin-left: 25%;
-        min-width: 200px;
-      }
-
-      h1.small {
-        font-size: 30px;
-      }
-      #linksContainer {
-        flex-direction: column;
-      }
-
-      .link-group {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    @media (max-width: 1000px) and (orientation: landscape) {
-      .container {
-        max-width: 80vw;
-      }
-
-      #linksContainer {
-        flex-direction: column;
-      }
-
-      .link-group {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 10px;
-        width: 60%;
-      }
-
-      .link-group label,
-      .link-group input {
-        width: 65%;
-      }
-    }
-  </style>
 
   <body>
     <aside class="pc">
