@@ -49,6 +49,7 @@
       href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Condensed&family=Teko&amily=Instrument+Sans&family=Nabla&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="index.css"/>
 
     <script
       src="https://kit.fontawesome.com/d7010814d9.js"
@@ -57,87 +58,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
 
-  <style>
-    html,
-    body {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-      min-height: 100vh;
-      background-color: blueviolet;
-    }
-
-    .btn-primary {
-      color: #fff;
-      background-color: blueviolet;
-      border-color: aliceblue; /*set the color you want here*/
-    }
-    .btn-primary:hover {
-      background-color: rgb(113, 43, 179);
-      border-color: aliceblue; /*set the color you want here*/
-    }
-    .btn-primary::after {
-      background-color: blueviolet;
-    }
-
-    .btn-primary:focus {
-      background-color: blueviolet;
-    }
-
-    a {
-      color: aliceblue;
-      text-decoration: none;
-      background-color: transparent;
-    }
-
-    a:hover {
-      text-decoration: none;
-      color: rgb(145, 145, 240) !important;
-    }
-
-    .hover-underline-animation {
-      display: inline-block;
-      position: relative;
-    }
-
-    .hover-underline-animation::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: blueviolet;
-      transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
-    }
-
-    .hover-underline-animation:hover::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
-    }
-
-    .counter-wrapper {
-      display: flex;
-      justify-content: center;
-    }
-    .counter {
-      transition: opacity 3s ease-in-out; /* Add a transition effect to opacity */
-    }
-    @media (max-width: 768px) {
-      .col {
-        flex-basis: 100% !important;
-      }
-    }
-    .zoom {
-      transition: transform 0.2s; /* Animation */
-      margin: 0 auto;
-    }
-
-    .zoom:hover {
-      transform: scale(1.2);
-    }
-  </style>
 
   <body>
     <header
