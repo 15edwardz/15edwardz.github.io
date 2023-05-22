@@ -193,7 +193,7 @@ $(document).ready(function () {
     htmlCode +=
       "  <footer>\n" +
       '    <div style="text-align: center; color: rgb(218, 230, 241)">\n' +
-      '        <a href="https://www.edwardzhang.dev/link-builder" target="_blank" style="text-decoration:none; color: #bdaebd">Created using Link in Bio</a>\n' +
+      '        <a href="https://www.edwardzhang.dev/linkinbio/link-builder" target="_blank" style="text-decoration:none; color: #bdaebd">Created using Link in Bio</a>\n' +
       "    </div>\n" +
       "  </footer>\n";
     htmlCode += "</html>";
