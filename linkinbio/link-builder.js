@@ -137,8 +137,8 @@ $(document).ready(function () {
       "    .icenter {margin: auto;width: 60%;padding: 10px; text-align: center;}\n" +
       "    .icons {transition: transform 300ms ease-in-out;}\n" +
       "    .icons:hover {transform: scale(1.12);}\n" +
-      "    .linkpc {display: inline-block; margin-left: 10px;}" +
-      "@media (max-width: 600px) {div.linkpc {display: block;}}";
+      "    .linkpc {display: inline-block; margin-left: 10px;}\n" +
+      "    @media (max-width: 600px) {div.linkpc {display: block;} .container-flexible, .icons {transition: none; transform: none;} .container-flexible:hover, .icons:hover {transition: none; transform: none;}}\n";
     htmlCode += "  \<\/style>\n";
     htmlCode += "  <body>\n";
     htmlCode +=
