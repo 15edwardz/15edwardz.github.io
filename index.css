@@ -68,7 +68,19 @@ a:hover {
   .col {
     flex-basis: 100% !important;
   }
+  .pc-only {
+    display: none;
+  }
 }
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none;
+
+  }
+}
+
+
 .zoom {
   transition: transform 0.2s; /* Animation */
   margin: 0 auto;
