@@ -34,17 +34,13 @@
 
     <link rel="canonical" href="https://edwardzhang.dev" />
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -346,8 +342,8 @@
           </p>
           <p>
             <a
-              type="button"
-              data-toggle="collapse"
+              class="btn"
+              data-bs-toggle="collapse"              
               href="#RBCmore"
               role="button"
               aria-expanded="false"
@@ -380,31 +376,15 @@
               />
               <p>RBC Capital Markets QTS Orientation, 155 Wellington St West</p>
 
-              <div
-                class="accordion"
-                id="RBCAccordion"
-                style="padding-bottom: 50px"
-              >
-                <div class="card">
-                  <div
-                    class="card-header collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="collapseTwo"
-                    style="background-color: rgb(233, 240, 248)"
-                  >
-                    <span class="title">Workshops/Events</span>
-                    <span class="accicon"
-                      ><i class="fas fa-angle-down rotate-icon"></i
-                    ></span>
-                  </div>
-                  <div
-                    id="collapseTwo"
-                    class="collapse"
-                    data-parent="#RBCAccordion"
-                  >
-                    <div class="card-body">
+              <div class="accordion" id="RBCAccordion">
+                <div class="accordion-item" >
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Workshops and Events
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#RBCAccordion">
+                    <div class="accordion-body">
                       <h2>Battle Snakes</h2>
                       <p>
                         Battlesnake is a multi-player programming game where
@@ -424,12 +404,8 @@
                         in a team's stock, each member receives commision, which
                         is added to their return on investment to determine a
                         winner.
-                      </p>
-                      <div
-                        id="carouselExampleControls"
-                        class="carousel slide"
-                        data-interval="false"
-                      >
+                      </p>  
+                      <div id="carouselExampleControls" class="carousel slide">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
                             <div
@@ -440,363 +416,247 @@
                                 display: inline-block;
                               "
                             >
-                              <img
-                                src="https://www.advfn.com/common/images/company/N_MSFT.png"
-                                class="card-img-top"
-                                alt="Microsoft Logo"
-                                style="max-width:30px"
-                              />
-                              <div class="card-body">
-                                <h5 class="card-title">Ticker 1 - MSFT</h5>
-                                <p class="card-text">
-                                  <b>Theme: Oligopoly</b><br />
-                                  <b>My Role: Investment Thesis</b>
-                                </p>
+                            <img
+                              src="https://www.advfn.com/common/images/company/N_MSFT.png"
+                              class="card-img-top"
+                              alt="Microsoft Logo"
+                              style="max-width:30px"
+                            />
+                            <div class="card-body">
+                              <h5 class="card-title">Ticker 1 - MSFT</h5>
+                              <p class="card-text">
+                                <b>Theme: Oligopoly</b><br />
+                                <b>My Role: Investment Thesis</b>
+                              </p>
 
-                                <p>
-                                  Analyzed factors that drove MSFT's updside.
-                                  Analyzed Microsoft's market share, sectors and
-                                  streams of revenue, historical data as well as
-                                  stock charts.
-                                  <br /><p class="pc-only">Here are some key points:</p>
-                                </p>
+                              <p>
+                                Analyzed factors that drove MSFT's updside.
+                                Analyzed Microsoft's market share, sectors and
+                                streams of revenue, historical data as well as
+                                stock charts.
+                                <br /><p class="pc-only">Here are some key points:</p>
+                              </p>
 
-                                <ul class="pc-only" style="text-align: left">
-                                  <li>
-                                    Microsoft is a dominant force in every
-                                    industry they operate in
-                                  </li>
-                                  <li>
-                                    Microsoft and Open AI partnership secures
-                                    it's place in the future of AI and tech
-                                  </li>
-                                  <li>
-                                    Integrate AI into its cloud AI
-                                    infrastrucutre to prevent commoditization
-                                  </li>
-                                  <li>
-                                    Q3 FY 2023 results shows significant growth,
-                                    especially for intelligent cloud - immediate
-                                    effects of the Open AI partnership
-                                  </li>
-                                  <li>
-                                    Historical data shows stability as well as
-                                    profitability
-                                  </li>
-                                  <li>Stock chart shows an uptrend</li>
-                                  <li>
-                                    Golden cross (50 and 200 day MA) as well as
-                                    historical trends have a strong bullish
-                                    outlook
-                                  </li>
-                                </ul>
+                              <ul class="pc-only" style="text-align: left">
+                                <li>
+                                  Microsoft is a dominant force in every
+                                  industry they operate in
+                                </li>
+                                <li>
+                                  Microsoft and Open AI partnership secures
+                                  it's place in the future of AI and tech
+                                </li>
+                                <li>
+                                  Integrate AI into its cloud AI
+                                  infrastrucutre to prevent commoditization
+                                </li>
+                                <li>
+                                  Q3 FY 2023 results shows significant growth,
+                                  especially for intelligent cloud - immediate
+                                  effects of the Open AI partnership
+                                </li>
+                                <li>
+                                  Historical data shows stability as well as
+                                  profitability
+                                </li>
+                                <li>Stock chart shows an uptrend</li>
+                                <li>
+                                  Golden cross (50 and 200 day MA) as well as
+                                  historical trends have a strong bullish
+                                  outlook
+                                </li>
+                              </ul>
 
-                                <div class="btn-group">
-                                  <a
-                                    href="https://www.canva.com/design/DAFmR1D2TjQ/isYFqmNMpo0ZLjf4IGDQLQ/edit?utm_content=DAFmR1D2TjQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                                    target="_blank"
-                                    class="btn btn-primary"
-                                    >Link to presentation</a
-                                  >
-                                  <a
-                                    href="https://www.canva.com/design/DAFmR2YtcXs/5VYPfKg3PpHH8Vu-U6cmKA/edit?utm_content=DAFmR2YtcXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                                    target="_blank"
-                                    class="btn btn-primary"
-                                    >Link to transcript</a
-                                  >
-                                </div>
+                              <div class="btn-group">
+                                <a
+                                  href="https://www.canva.com/design/DAFmR1D2TjQ/isYFqmNMpo0ZLjf4IGDQLQ/edit?utm_content=DAFmR1D2TjQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                  target="_blank"
+                                  class="btn btn-primary"
+                                  >Link to presentation</a
+                                >
+                                <a
+                                  href="https://www.canva.com/design/DAFmR2YtcXs/5VYPfKg3PpHH8Vu-U6cmKA/edit?utm_content=DAFmR2YtcXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                  target="_blank"
+                                  class="btn btn-primary"
+                                  >Link to transcript</a
+                                >
                               </div>
                             </div>
+                            </div>                          
                           </div>
                           <div class="carousel-item">
                             <div
-                              class="card"
-                              style="
-                                width: auto;
-                                max-width: 55rem;
-                                display: inline-block;
-                              "
-                            >
-                              <img
-                                src="https://www.advfn.com/common/images/company/N_MSFT.png"
-                                class="card-img-top"
-                                alt="Microsoft Logo"
-                                style="max-width:30px"
-                              />
-                              <div class="card-body">
-                                <h5 class="card-title">Ticker 1 - MSFT</h5>
-                                <p class="card-text">
-                                  <b>Theme: Oligopoly</b><br />
-                                  <b>My Role: Investment Thesis</b>
-                                </p>
-
-                                <p>
-                                  Analyzed factors that drove MSFT's updside.
-                                  Analyzed Microsoft's market share, sectors and
-                                  streams of revenue, historical data as well as
-                                  stock charts.
-                                  <br /><p class="pc-only">Here are some key points:</p>
-                                </p>
-
-                                <ul class="pc-only" style="text-align: left">
-                                  <li>
-                                    Microsoft is a dominant force in every
-                                    industry they operate in
-                                  </li>
-                                  <li>
-                                    Microsoft and Open AI partnership secures
-                                    it's place in the future of AI and tech
-                                  </li>
-                                  <li>
-                                    Integrate AI into its cloud AI
-                                    infrastrucutre to prevent commoditization
-                                  </li>
-                                  <li>
-                                    Q3 FY 2023 results shows significant growth,
-                                    especially for intelligent cloud - immediate
-                                    effects of the Open AI partnership
-                                  </li>
-                                  <li>
-                                    Historical data shows stability as well as
-                                    profitability
-                                  </li>
-                                  <li>Stock chart shows an uptrend</li>
-                                  <li>
-                                    Golden cross (50 and 200 day MA) as well as
-                                    historical trends have a strong bullish
-                                    outlook
-                                  </li>
-                                </ul>
-
-                                <div class="btn-group">
-                                  <a
-                                    href="https://www.canva.com/design/DAFmR1D2TjQ/isYFqmNMpo0ZLjf4IGDQLQ/edit?utm_content=DAFmR1D2TjQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                                    target="_blank"
-                                    class="btn btn-primary"
-                                    >Link to presentation</a
-                                  >
-                                  <a
-                                    href="https://www.canva.com/design/DAFmR2YtcXs/5VYPfKg3PpHH8Vu-U6cmKA/edit?utm_content=DAFmR2YtcXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                                    target="_blank"
-                                    class="btn btn-primary"
-                                    >Link to transcript</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div
-                              class="card"
-                              style="
-                                width: auto;
-                                max-width: 55rem;
-                                display: inline-block;
-                              "
-                            >
-                              <img
-                                src="https://www.advfn.com/common/images/company/N_MSFT.png"
-                                class="card-img-top"
-                                alt="Microsoft Logo"
-                                style="max-width:30px"
-                              />
-                              <div class="card-body">
-                                <h5 class="card-title">Ticker 1 - MSFT</h5>
-                                <p class="card-text">
-                                  <b>Theme: Oligopoly</b><br />
-                                  <b>My Role: Investment Thesis</b>
-                                </p>
-
-                                <p>
-                                  Analyzed factors that drove MSFT's updside.
-                                  Analyzed Microsoft's market share, sectors and
-                                  streams of revenue, historical data as well as
-                                  stock charts.
-                                  <br /><p class="pc-only">Here are some key points:</p>
-                                </p>
-
-                                <ul class="pc-only" style="text-align: left">
-                                  <li>
-                                    Microsoft is a dominant force in every
-                                    industry they operate in
-                                  </li>
-                                  <li>
-                                    Microsoft and Open AI partnership secures
-                                    it's place in the future of AI and tech
-                                  </li>
-                                  <li>
-                                    Integrate AI into its cloud AI
-                                    infrastrucutre to prevent commoditization
-                                  </li>
-                                  <li>
-                                    Q3 FY 2023 results shows significant growth,
-                                    especially for intelligent cloud - immediate
-                                    effects of the Open AI partnership
-                                  </li>
-                                  <li>
-                                    Historical data shows stability as well as
-                                    profitability
-                                  </li>
-                                  <li>Stock chart shows an uptrend</li>
-                                  <li>
-                                    Golden cross (50 and 200 day MA) as well as
-                                    historical trends have a strong bullish
-                                    outlook
-                                  </li>
-                                </ul>
-
-                                <div class="btn-group">
-                                  <a
-                                    href="https://www.canva.com/design/DAFmR1D2TjQ/isYFqmNMpo0ZLjf4IGDQLQ/edit?utm_content=DAFmR1D2TjQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                                    target="_blank"
-                                    class="btn btn-primary"
-                                    >Link to presentation</a
-                                  >
-                                  <a
-                                    href="https://www.canva.com/design/DAFmR2YtcXs/5VYPfKg3PpHH8Vu-U6cmKA/edit?utm_content=DAFmR2YtcXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                                    target="_blank"
-                                    class="btn btn-primary"
-                                    >Link to transcript</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div
-                              class="card"
-                              style="
-                                width: auto;
-                                max-width: 55rem;
-                                display: inline-block;
-                              "
-                            >
-                              <img
-                                src="https://www.advfn.com/common/images/company/N_MSFT.png"
-                                class="card-img-top"
-                                alt="Microsoft Logo"
-                                style="max-width:30px"
-                              />
-                              <div class="card-body">
-                                <h5 class="card-title">Ticker 1 - MSFT</h5>
-                                <p class="card-text">
-                                  <b>Theme: Oligopoly</b><br />
-                                  <b>My Role: Investment Thesis</b>
-                                </p>
-
-                                <p>
-                                  Analyzed factors that drove MSFT's updside.
-                                  Analyzed Microsoft's market share, sectors and
-                                  streams of revenue, historical data as well as
-                                  stock charts.
-                                  <br /><p class="pc-only">Here are some key points:</p>
-                                </p>
-
-                                <ul class="pc-only" style="text-align: left">
-                                  <li>
-                                    Microsoft is a dominant force in every
-                                    industry they operate in
-                                  </li>
-                                  <li>
-                                    Microsoft and Open AI partnership secures
-                                    it's place in the future of AI and tech
-                                  </li>
-                                  <li>
-                                    Integrate AI into its cloud AI
-                                    infrastrucutre to prevent commoditization
-                                  </li>
-                                  <li>
-                                    Q3 FY 2023 results shows significant growth,
-                                    especially for intelligent cloud - immediate
-                                    effects of the Open AI partnership
-                                  </li>
-                                  <li>
-                                    Historical data shows stability as well as
-                                    profitability
-                                  </li>
-                                  <li>Stock chart shows an uptrend</li>
-                                  <li>
-                                    Golden cross (50 and 200 day MA) as well as
-                                    historical trends have a strong bullish
-                                    outlook
-                                  </li>
-                                </ul>
-
-                                <div class="btn-group">
-                                  <a
-                                    href="https://www.canva.com/design/DAFmR1D2TjQ/isYFqmNMpo0ZLjf4IGDQLQ/edit?utm_content=DAFmR1D2TjQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                                    target="_blank"
-                                    class="btn btn-primary"
-                                    >Link to presentation</a
-                                  >
-                                  <a
-                                    href="https://www.canva.com/design/DAFmR2YtcXs/5VYPfKg3PpHH8Vu-U6cmKA/edit?utm_content=DAFmR2YtcXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                                    target="_blank"
-                                    class="btn btn-primary"
-                                    >Link to transcript</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <a
-                          class="carousel-control-prev"
-                          href="#carouselExampleControls"
-                          role="button"
-                          data-slide="prev"
-                        >
-                          <span
-                            class="carousel-control-prev-icon"
-                            aria-hidden="true"
-                          ></span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                        <a
-                          class="carousel-control-next"
-                          href="#carouselExampleControls"
-                          role="button"
-                          data-slide="next"
-                        >
-                          <span
-                            class="carousel-control-next-icon"
-                            aria-hidden="true"
-                          ></span>
-                          <span class="sr-only">Next</span>
-                        </a>
-                      </div>
-
-                      <!--<div class="card" style="width: 18rem;display: inline-block;">
-                          <img src="..." class="card-img-top" alt="...">
+                            class="card"
+                            style="
+                              width: auto;
+                              max-width: 55rem;
+                              display: inline-block;
+                            "
+                          >
+                          <img
+                            src="https://www.advfn.com/common/images/company/N_MSFT.png"
+                            class="card-img-top"
+                            alt="Microsoft Logo"
+                            style="max-width:30px"
+                          />
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="https://www.canva.com/design/DAFmRr1TsAs/AGTmN2ya-tmGBk6zHF8zvA/edit?utm_content=DAFmRr1TsAs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">Ticker 1 - MSFT</h5>
+                            <p class="card-text">
+                              <b>Theme: Oligopoly</b><br />
+                              <b>My Role: Investment Thesis</b>
+                            </p>
+
+                            <p>
+                              Analyzed factors that drove MSFT's updside.
+                              Analyzed Microsoft's market share, sectors and
+                              streams of revenue, historical data as well as
+                              stock charts.
+                              <br /><p class="pc-only">Here are some key points:</p>
+                            </p>
+
+                            <ul class="pc-only" style="text-align: left">
+                              <li>
+                                Microsoft is a dominant force in every
+                                industry they operate in
+                              </li>
+                              <li>
+                                Microsoft and Open AI partnership secures
+                                it's place in the future of AI and tech
+                              </li>
+                              <li>
+                                Integrate AI into its cloud AI
+                                infrastrucutre to prevent commoditization
+                              </li>
+                              <li>
+                                Q3 FY 2023 results shows significant growth,
+                                especially for intelligent cloud - immediate
+                                effects of the Open AI partnership
+                              </li>
+                              <li>
+                                Historical data shows stability as well as
+                                profitability
+                              </li>
+                              <li>Stock chart shows an uptrend</li>
+                              <li>
+                                Golden cross (50 and 200 day MA) as well as
+                                historical trends have a strong bullish
+                                outlook
+                              </li>
+                            </ul>
+
+                            <div class="btn-group">
+                              <a
+                                href="https://www.canva.com/design/DAFmR1D2TjQ/isYFqmNMpo0ZLjf4IGDQLQ/edit?utm_content=DAFmR1D2TjQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                target="_blank"
+                                class="btn btn-primary"
+                                >Link to presentation</a
+                              >
+                              <a
+                                href="https://www.canva.com/design/DAFmR2YtcXs/5VYPfKg3PpHH8Vu-U6cmKA/edit?utm_content=DAFmR2YtcXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                target="_blank"
+                                class="btn btn-primary"
+                                >Link to transcript</a
+                              >
+                            </div>
                           </div>
+                          </div>                            </div>
+                          <div class="carousel-item">
+                            <div
+                            class="card"
+                            style="
+                              width: auto;
+                              max-width: 55rem;
+                              display: inline-block;
+                            "
+                          >
+                          <img
+                            src="https://www.advfn.com/common/images/company/N_MSFT.png"
+                            class="card-img-top"
+                            alt="Microsoft Logo"
+                            style="max-width:30px"
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">Ticker 1 - MSFT</h5>
+                            <p class="card-text">
+                              <b>Theme: Oligopoly</b><br />
+                              <b>My Role: Investment Thesis</b>
+                            </p>
+
+                            <p>
+                              Analyzed factors that drove MSFT's updside.
+                              Analyzed Microsoft's market share, sectors and
+                              streams of revenue, historical data as well as
+                              stock charts.
+                              <br /><p class="pc-only">Here are some key points:</p>
+                            </p>
+
+                            <ul class="pc-only" style="text-align: left">
+                              <li>
+                                Microsoft is a dominant force in every
+                                industry they operate in
+                              </li>
+                              <li>
+                                Microsoft and Open AI partnership secures
+                                it's place in the future of AI and tech
+                              </li>
+                              <li>
+                                Integrate AI into its cloud AI
+                                infrastrucutre to prevent commoditization
+                              </li>
+                              <li>
+                                Q3 FY 2023 results shows significant growth,
+                                especially for intelligent cloud - immediate
+                                effects of the Open AI partnership
+                              </li>
+                              <li>
+                                Historical data shows stability as well as
+                                profitability
+                              </li>
+                              <li>Stock chart shows an uptrend</li>
+                              <li>
+                                Golden cross (50 and 200 day MA) as well as
+                                historical trends have a strong bullish
+                                outlook
+                              </li>
+                            </ul>
+
+                            <div class="btn-group">
+                              <a
+                                href="https://www.canva.com/design/DAFmR1D2TjQ/isYFqmNMpo0ZLjf4IGDQLQ/edit?utm_content=DAFmR1D2TjQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                target="_blank"
+                                class="btn btn-primary"
+                                >Link to presentation</a
+                              >
+                              <a
+                                href="https://www.canva.com/design/DAFmR2YtcXs/5VYPfKg3PpHH8Vu-U6cmKA/edit?utm_content=DAFmR2YtcXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                target="_blank"
+                                class="btn btn-primary"
+                                >Link to transcript</a
+                              >
+                            </div>
+                          </div>
+                          </div>                            </div>
                         </div>
-                      -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>                 
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div
-                    class="card-header collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseThree"
-                    aria-expanded="false"
-                    style="background-color: rgb(233, 240, 248)"
-                  >
-                    <span class="title">Volunteering</span>
-                    <span class="accicon"
-                      ><i class="fas fa-angle-down rotate-icon"></i
-                    ></span>
-                  </div>
-                  <div
-                    id="collapseThree"
-                    class="collapse"
-                    data-parent="#RBCAccordion"
-                  >
-                    <div class="card-body">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Volunteering
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#RBCAccordion">
+                    <div class="accordion-body">
                       <h2>RBC Canadian Open</h2>
                       <p>
                         What an incredible experience! I volunteered as a
@@ -813,31 +673,31 @@
                         feeling as the crowd at the RBC Open is unlike any
                         other.
                       </p>
-                      <div id="rbcopenCarousel" class="carousel slide" data-ride="carousel">
+                      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                          <div class="carousel-item active">
+                          <div class="carousel-item active" data-bs-interval="5000">
                             <img class="d-block mx-auto img-fluid" style="width: auto; max-height: 35rem;" src="https://github.com/15edwardz/15edwardz.github.io/blob/master/Images/rbcopen.jpg?raw=true" alt="RBC Open">
                           </div>
-                          <div class="carousel-item">
+                          <div class="carousel-item" data-bs-interval="5000">
                             <img class="d-block mx-auto img-fluid" style="width: auto; max-height: 35rem;" src="https://github.com/15edwardz/15edwardz.github.io/blob/master/Images/rbcopenminigolf.jpg?raw=true" alt="RBC Open Mini Golf">
                           </div>
-                          <div class="carousel-item">
+                          <div class="carousel-item" data-bs-interval="5000">
                             <img class="d-block mx-auto img-fluid" style="width: auto; max-height: 35rem;" src="https://github.com/15edwardz/15edwardz.github.io/blob/master/Images/rbcopenlobby.jpg?raw=true" alt="RBC Open Lobby">
                           </div>
-                          <div class="carousel-item">
+                          <div class="carousel-item" data-bs-interval="5000">
                             <img class="d-block mx-auto img-fluid" style="width: auto; max-height: 35rem;" src="https://github.com/15edwardz/15edwardz.github.io/blob/master/Images/rbcopenhole12.jpg?raw=true" alt="RBC Open Hole 12">
                           </div>
                         </div>
-                        <a class="carousel-control-prev" href="#rbcopenCarousel" role="button" data-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#rbcopenCarousel" role="button" data-slide="next">
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Next</span>
-                        </a>
+                          <span class="visually-hidden">Next</span>
+                        </button>
                       </div>
-                      
+
                       <h2 style="margin-top: 30px;">
                         RBC Building Digital Literacy Summer 2023 Virtual Coding
                         Camp.
@@ -853,6 +713,20 @@
                     </div>
                   </div>
                 </div>
+                <!--                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Accordion Item #3
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#RBCAccordion">
+                    <div class="accordion-body">
+                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+                -->
+
               </div>
             </div>
           </div>
@@ -928,13 +802,14 @@
 
           <p>
             <a
-              type="button"
-              data-toggle="collapse"
+              type="btn"
+              data-bs-toggle="collapse"
               href="#LinkInBiomore"
               role="button"
               aria-expanded="false"
               aria-controls="LinkInBiomore"
             >
+
               <span
                 class="hover-underline-animation"
                 target="_blank;"
@@ -1071,8 +946,8 @@
     <a
       type="button"
       class="btn"
-      data-toggle="modal"
-      data-target="#versionModal"
+      data-bs-toggle="modal"
+      data-bs-target="#versionModal"
       style="margin: 2vw; border-width: 0px"
     >
       <img
@@ -1082,6 +957,8 @@
         style="border-radius: 100px; max-width: 60px"
       />
     </a>
+
+    
     <div
       class="modal fade"
       id="versionModal"
@@ -1100,14 +977,7 @@
             >
               Go back in time...
             </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+
           </div>
           <div
             class="modal-body"
@@ -1121,6 +991,23 @@
               style="color: blueviolet"
               >Edward Zhang (v1)</a
             >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
@@ -1151,10 +1038,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
