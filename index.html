@@ -64,19 +64,31 @@
     <header
       style="height: 65vw; background-color: blueviolet; margin-bottom: 0px"
     >
-    <nav class="navbar navbar-dark navbar-expand-sm pc-only" style="transition: top 0.5s; background-color: blueviolet; box-shadow: 0 5px 10px 0 rgba(63, 44, 44, 0.2);">
-      <a href="#" class="navbar-brand"></a>
-    
-      <div class="navbar-collapse collapse" id="navbar" navbar>
-        <ul class="navbar-nav">
-          <li class="nav-item"><a href="#top" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#intro" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    
+      <nav
+        class="navbar navbar-dark navbar-expand-sm pc-only"
+        style="
+          transition: top 0.5s;
+          background-color: blueviolet;
+          box-shadow: 0 5px 10px 0 rgba(63, 44, 44, 0.2);
+        "
+      >
+        <a href="#" class="navbar-brand"></a>
+
+        <div class="navbar-collapse collapse" id="navbar" navbar>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#top" class="nav-link">Home</a></li>
+            <li class="nav-item">
+              <a href="#intro" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#experience" class="nav-link">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
       <div>
         <br />
@@ -278,6 +290,7 @@
         </div>
       </div>
 
+
       <div
         id="experience"
         style="
@@ -317,10 +330,19 @@
             As a software developer intern, I am under RBCCM's Quantitative &
             Technology Services (QTS) Digital Channels group. I started my term
             in May 2023 and my current tech stack consists of HTML, CSS,
-            JavaScript as well as Bootstrap and Jquery.
-
+            JavaScript as well as Bootstrap and Jquery. I work with RBC Capital
+            Markets' intranet sites as well as
+            <a href="https://www.rbccm.com/en/" style="color: rgb(0, 0, 0)"
+              >rbccm.com</a
+            >. With 60,000+ monthly visitors on intranet sites and 500,000+
+            monthly visitors on
+            <a href="https://www.rbccm.com/en/" style="color: rgb(0, 0, 0)"
+              >rbccm.com</a
+            >, I created and published high quality articles, pushed out RBC
+            Investor & Treasury Services rebrand (<a href="http://rbcis.com/en" style="color: rgb(0, 0, 0)"
+              >rbcis.com</a
+            >), and much more.
             <br />
-            More to come...
           </p>
           <p>
             <a
@@ -349,12 +371,464 @@
               <img
                 src="https://github.com/15edwardz/15edwardz.github.io/blob/master/Images/RBC_wellington_orientation_2023.jpg?raw=true"
                 alt="RBC Orientation"
-                style="padding-bottom: 0.1vw"
+                style="
+                  padding-bottom: 0.1vw;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 80%;
+                "
               />
               <p>RBC Capital Markets QTS Orientation, 155 Wellington St West</p>
+
+              <div
+                class="accordion"
+                id="RBCAccordion"
+                style="padding-bottom: 50px"
+              >
+                <div class="card">
+                  <div
+                    class="card-header collapsed"
+                    data-toggle="collapse"
+                    data-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                    style="background-color: rgb(233, 240, 248)"
+                  >
+                    <span class="title">Workshops/Events</span>
+                    <span class="accicon"
+                      ><i class="fas fa-angle-down rotate-icon"></i
+                    ></span>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="collapse"
+                    data-parent="#RBCAccordion"
+                  >
+                    <div class="card-body">
+                      <h2>Battle Snakes</h2>
+                      <p>
+                        Battlesnake is a multi-player programming game where
+                        teams build virtual snakes to face off in a tournament
+                        style arena. This tournament connected me with other RBC
+                        students, as well as hands on experience with languages
+                        such as Python.
+                      </p>
+                      <h2>Stock Ticker</h2>
+                      <p>
+                        The game consists of both the buy side and the sell
+                        side, where each team convinces people on the buy side
+                        to invest in the stock being presented.<br />
+                        Each team chooses a stock that fits under a given theme
+                        each round (ie. industry, geography, technology), with a
+                        total of 4 rounds. Every time someone chooses to invest
+                        in a team's stock, each member receives commision, which
+                        is added to their return on investment to determine a
+                        winner.
+                      </p>
+                      <div
+                        id="carouselExampleControls"
+                        class="carousel slide"
+                        data-interval="false"
+                      >
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div
+                              class="card"
+                              style="
+                                width: auto;
+                                max-width: 18rem;
+                                display: inline-block;
+                              "
+                            >
+                              <img
+                                src="https://www.advfn.com/common/images/company/N_MSFT.png"
+                                class="card-img-top"
+                                alt="Microsoft Logo"
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">Ticker 1 - MSFT</h5>
+                                <p class="card-text">
+                                  <b>Theme: Oligopoly</b><br />
+                                  <b>My Role: Investment Thesis</b>
+                                </p>
+
+                                <p>
+                                  Analyzed factors that drove MSFT's updside.
+                                  Analyzed Microsoft's market share, sectors and
+                                  streams of revenue, historical data as well as
+                                  stock charts.
+                                  <br />Here are some key points:
+                                </p>
+
+                                <ul style="text-align: left">
+                                  <li>
+                                    Microsoft is a dominant force in every
+                                    industry they operate in
+                                  </li>
+                                  <li>
+                                    Microsoft and Open AI partnership secures
+                                    it's place in the future of AI and tech
+                                  </li>
+                                  <li>
+                                    Integrate AI into its cloud AI
+                                    infrastrucutre to prevent commoditization
+                                  </li>
+                                  <li>
+                                    Q3 FY 2023 results shows significant growth,
+                                    especially for intelligent cloud - immediate
+                                    effects of the Open AI partnership
+                                  </li>
+                                  <li>
+                                    Historical data shows stability as well as
+                                    profitability
+                                  </li>
+                                  <li>Stock chart shows an uptrend</li>
+                                  <li>
+                                    Golden cross (50 and 200 day MA) as well as
+                                    historical trends have a strong bullish
+                                    outlook
+                                  </li>
+                                </ul>
+
+                                <div class="btn-group">
+                                  <a
+                                    href="https://www.canva.com/design/DAFmR1D2TjQ/isYFqmNMpo0ZLjf4IGDQLQ/edit?utm_content=DAFmR1D2TjQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                    >Link to presentation</a
+                                  >
+                                  <a
+                                    href="https://www.canva.com/design/DAFmR2YtcXs/5VYPfKg3PpHH8Vu-U6cmKA/edit?utm_content=DAFmR2YtcXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                    >Link to transcript</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div
+                              class="card"
+                              style="
+                                width: auto;
+                                max-width: 18rem;
+                                display: inline-block;
+                              "
+                            >
+                              <img
+                                src="https://www.advfn.com/common/images/company/N_MSFT.png"
+                                class="card-img-top"
+                                alt="Microsoft Logo"
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">Ticker 1 - MSFT</h5>
+                                <p class="card-text">
+                                  <b>Theme: Oligopoly</b><br />
+                                  <b>My Role: Investment Thesis</b>
+                                </p>
+
+                                <p>
+                                  Analyzed factors that drove MSFT's updside.
+                                  Analyzed Microsoft's market share, sectors and
+                                  streams of revenue, historical data as well as
+                                  stock charts.
+                                  <br />Here are some key points:
+                                </p>
+
+                                <ul style="text-align: left">
+                                  <li>
+                                    Microsoft is a dominant force in every
+                                    industry they operate in
+                                  </li>
+                                  <li>
+                                    Microsoft and Open AI partnership secures
+                                    it's place in the future of AI and tech
+                                  </li>
+                                  <li>
+                                    Integrate AI into its cloud AI
+                                    infrastrucutre to prevent commoditization
+                                  </li>
+                                  <li>
+                                    Q3 FY 2023 results shows significant growth,
+                                    especially for intelligent cloud - immediate
+                                    effects of the Open AI partnership
+                                  </li>
+                                  <li>
+                                    Historical data shows stability as well as
+                                    profitability
+                                  </li>
+                                  <li>Stock chart shows an uptrend</li>
+                                  <li>
+                                    Golden cross (50 and 200 day MA) as well as
+                                    historical trends have a strong bullish
+                                    outlook
+                                  </li>
+                                </ul>
+
+                                <div class="btn-group">
+                                  <a
+                                    href="https://www.canva.com/design/DAFmR1D2TjQ/isYFqmNMpo0ZLjf4IGDQLQ/edit?utm_content=DAFmR1D2TjQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                    >Link to presentation</a
+                                  >
+                                  <a
+                                    href="https://www.canva.com/design/DAFmR2YtcXs/5VYPfKg3PpHH8Vu-U6cmKA/edit?utm_content=DAFmR2YtcXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                    >Link to transcript</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div
+                              class="card"
+                              style="
+                                width: auto;
+                                max-width: 18rem;
+                                display: inline-block;
+                              "
+                            >
+                              <img
+                                src="https://www.advfn.com/common/images/company/N_MSFT.png"
+                                class="card-img-top"
+                                alt="Microsoft Logo"
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">Ticker 1 - MSFT</h5>
+                                <p class="card-text">
+                                  <b>Theme: Oligopoly</b><br />
+                                  <b>My Role: Investment Thesis</b>
+                                </p>
+
+                                <p>
+                                  Analyzed factors that drove MSFT's updside.
+                                  Analyzed Microsoft's market share, sectors and
+                                  streams of revenue, historical data as well as
+                                  stock charts.
+                                  <br />Here are some key points:
+                                </p>
+
+                                <ul style="text-align: left">
+                                  <li>
+                                    Microsoft is a dominant force in every
+                                    industry they operate in
+                                  </li>
+                                  <li>
+                                    Microsoft and Open AI partnership secures
+                                    it's place in the future of AI and tech
+                                  </li>
+                                  <li>
+                                    Integrate AI into its cloud AI
+                                    infrastrucutre to prevent commoditization
+                                  </li>
+                                  <li>
+                                    Q3 FY 2023 results shows significant growth,
+                                    especially for intelligent cloud - immediate
+                                    effects of the Open AI partnership
+                                  </li>
+                                  <li>
+                                    Historical data shows stability as well as
+                                    profitability
+                                  </li>
+                                  <li>Stock chart shows an uptrend</li>
+                                  <li>
+                                    Golden cross (50 and 200 day MA) as well as
+                                    historical trends have a strong bullish
+                                    outlook
+                                  </li>
+                                </ul>
+
+                                <div class="btn-group">
+                                  <a
+                                    href="https://www.canva.com/design/DAFmR1D2TjQ/isYFqmNMpo0ZLjf4IGDQLQ/edit?utm_content=DAFmR1D2TjQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                    >Link to presentation</a
+                                  >
+                                  <a
+                                    href="https://www.canva.com/design/DAFmR2YtcXs/5VYPfKg3PpHH8Vu-U6cmKA/edit?utm_content=DAFmR2YtcXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                    >Link to transcript</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div
+                              class="card"
+                              style="
+                                width: auto;
+                                max-width: 18rem;
+                                display: inline-block;
+                              "
+                            >
+                              <img
+                                src="https://www.advfn.com/common/images/company/N_MSFT.png"
+                                class="card-img-top"
+                                alt="Microsoft Logo"
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">Ticker 1 - MSFT</h5>
+                                <p class="card-text">
+                                  <b>Theme: Oligopoly</b><br />
+                                  <b>My Role: Investment Thesis</b>
+                                </p>
+
+                                <p>
+                                  Analyzed factors that drove MSFT's updside.
+                                  Analyzed Microsoft's market share, sectors and
+                                  streams of revenue, historical data as well as
+                                  stock charts.
+                                  <br />Here are some key points:
+                                </p>
+
+                                <ul style="text-align: left">
+                                  <li>
+                                    Microsoft is a dominant force in every
+                                    industry they operate in
+                                  </li>
+                                  <li>
+                                    Microsoft and Open AI partnership secures
+                                    it's place in the future of AI and tech
+                                  </li>
+                                  <li>
+                                    Integrate AI into its cloud AI
+                                    infrastrucutre to prevent commoditization
+                                  </li>
+                                  <li>
+                                    Q3 FY 2023 results shows significant growth,
+                                    especially for intelligent cloud - immediate
+                                    effects of the Open AI partnership
+                                  </li>
+                                  <li>
+                                    Historical data shows stability as well as
+                                    profitability
+                                  </li>
+                                  <li>Stock chart shows an uptrend</li>
+                                  <li>
+                                    Golden cross (50 and 200 day MA) as well as
+                                    historical trends have a strong bullish
+                                    outlook
+                                  </li>
+                                </ul>
+
+                                <div class="btn-group">
+                                  <a
+                                    href="https://www.canva.com/design/DAFmR1D2TjQ/isYFqmNMpo0ZLjf4IGDQLQ/edit?utm_content=DAFmR1D2TjQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                    >Link to presentation</a
+                                  >
+                                  <a
+                                    href="https://www.canva.com/design/DAFmR2YtcXs/5VYPfKg3PpHH8Vu-U6cmKA/edit?utm_content=DAFmR2YtcXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                    >Link to transcript</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a
+                          class="carousel-control-prev"
+                          href="#carouselExampleControls"
+                          role="button"
+                          data-slide="prev"
+                        >
+                          <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a
+                          class="carousel-control-next"
+                          href="#carouselExampleControls"
+                          role="button"
+                          data-slide="next"
+                        >
+                          <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+
+                      <!--<div class="card" style="width: 18rem;display: inline-block;">
+                          <img src="..." class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="https://www.canva.com/design/DAFmRr1TsAs/AGTmN2ya-tmGBk6zHF8zvA/edit?utm_content=DAFmRr1TsAs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                      -->
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="card-header collapsed"
+                    data-toggle="collapse"
+                    data-target="#collapseThree"
+                    aria-expanded="false"
+                    style="background-color: rgb(233, 240, 248)"
+                  >
+                    <span class="title">Volunteering</span>
+                    <span class="accicon"
+                      ><i class="fas fa-angle-down rotate-icon"></i
+                    ></span>
+                  </div>
+                  <div
+                    id="collapseThree"
+                    class="collapse"
+                    data-parent="#RBCAccordion"
+                  >
+                    <div class="card-body">
+                      <h2>RBC Canadian Open</h2>
+                      <p>
+                        What an incredible experience! I volunteered as a
+                        marshal at the 2023 RBC Canadian Open where I dedicated
+                        32+ hours over a four day period to ensuring the safety
+                        and timely execution of the tournament. Stationed at
+                        hole 12, working both the tee box and the green it was
+                        critical to ensure proper communication with my peers to
+                        safely close off areas and settle the crowd when the
+                        players were present. Overall, it was a blast to watch
+                        the pros play (and occasionally dodge a stray ball
+                        during the pro-am tournament). Watching Nick Taylor's 72
+                        feet eagle put for the win in person was an electric
+                        feeling as the crowd at the RBC Open is unlike any
+                        other.
+                      </p>
+                      <h2>
+                        RBC Building Digital Literacy Summer 2023 Virtual Coding
+                        Camp.
+                      </h2>
+                      <p>
+                        Volunteered as a technical camp facilitator for the
+                        intermediate group (Grades 6-8). The intermediate
+                        campers focused on the fundamentals of HTML, CSS and
+                        JavaScript. Through engaing hands-on coding, campers
+                        learnt created a variety of projects that showcase
+                        they're newly learnt skills. and engaging ways.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        
         <div
           class="d-inline-block"
           style="
@@ -387,14 +861,19 @@
             <br />
           </p>
 
-          <p class="pc-only">Built with HTML CSS and JavaScript, Link
-            in Bio features production-ready source code provided by an easy to use 
-            interface. Compatibility across all devices and screens paired with animations 
-            on select screen sizes allows for a responsive and engaging landing page. Furthermore,
-            with a wide range of icons to choose from as well as custom background colours, rest assured
-            that anyone visiting will have a positive user experience.</p>
+          <p class="pc-only">
+            Built with HTML CSS and JavaScript, Link in Bio features
+            production-ready source code provided by an easy to use interface.
+            Compatibility across all devices and screens paired with animations
+            on select screen sizes allows for a responsive and engaging landing
+            page. Furthermore, with a wide range of icons to choose from as well
+            as custom background colours, rest assured that anyone visiting will
+            have a positive user experience.
+          </p>
 
-          <p class="mobile-only">Built with HTML, CSS and JavaScript, Link in Bio features:</p>
+          <p class="mobile-only">
+            Built with HTML, CSS and JavaScript, Link in Bio features:
+          </p>
           <ul
             class="mobile-only"
             style="list-style-type: none; padding: 0; margin: 0"
@@ -456,7 +935,7 @@
                 style="color: blueviolet"
                 >User Guide</a
               >
-              <hr>
+              <hr />
 
               <aside>
                 <p>Live Demo</p>
