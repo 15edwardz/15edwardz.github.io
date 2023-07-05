@@ -6,6 +6,9 @@ body {
   background-color: blueviolet;
 }
 
+.btn-link:hover{
+  text-decoration: none;
+}
 .btn-primary {
   color: #fff;
   background-color: blueviolet;
@@ -64,6 +67,45 @@ a:hover {
 .counter {
   transition: opacity 3s ease-in-out; /* Add a transition effect to opacity */
 }
+.card{
+  background-color: aliceblue;
+}
+.card-header .title {
+  font-size: 17px;
+  color: #000;
+}
+.card-header .accicon {
+float: right;
+font-size: 20px;  
+width: 1.2em;
+}
+.card-header{
+cursor: pointer;
+border-bottom: none;
+}
+.card{
+border: 1px solid #ddd;
+}
+.card-body{
+border-top: 1px solid #ddd;
+}
+.card-header:not(.collapsed) .rotate-icon {
+transform: rotate(180deg);
+}
+
+.card-img-top{
+  max-width: 30px;
+}
+
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+ }
+ 
+ .carousel-control-next-icon {
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+ }
+
 @media (max-width: 768px) {
   .col {
     flex-basis: 100% !important;
