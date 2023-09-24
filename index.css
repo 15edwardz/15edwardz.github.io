@@ -12,11 +12,11 @@ body {
 .btn-primary {
   color: #fff;
   background-color: blueviolet;
-  border-color: aliceblue; /*set the color you want here*/
+  border-color: aliceblue; 
 }
 .btn-primary:hover {
   background-color: rgb(113, 43, 179);
-  border-color: aliceblue; /*set the color you want here*/
+  border-color: aliceblue; 
 }
 .btn-primary::after {
   background-color: blueviolet;
@@ -123,7 +123,7 @@ transform: rotate(180deg);
 
 
 .zoom {
-  transition: transform 0.2s; /* Animation */
+  transition: transform 0.2s;
   margin: 0 auto;
 }
 
